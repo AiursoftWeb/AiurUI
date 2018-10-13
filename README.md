@@ -1,6 +1,4 @@
-# Aiursoft.CDN
-
-[![Build Status](https://travis-ci.org/AiursoftWeb/CDN.svg?branch=master)](https://travis-ci.org/AiursoftWeb/CDN)
+# AiurUI
 
 The place for shared static resources of Aiursoft web apps
 
