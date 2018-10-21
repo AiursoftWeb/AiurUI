@@ -19,7 +19,11 @@ $(document).ready(function () {
         if (interval > 1) {
             return interval + " minutes ago";
         }
-        return Math.floor(seconds) + " seconds ago";
+        if (interval > 0) {
+            return Math.floor(seconds) + " seconds ago";
+        } else {
+            return date.toLocaleDateString();;
+        }
     }
     $('*[data-utc-time]').each(function (t) {
         var timefield = $(this);
