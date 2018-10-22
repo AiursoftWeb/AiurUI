@@ -38,6 +38,7 @@ var packages = [
             'node_modules/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js',
             'node_modules/clipboard/dist/clipboard.min.js',
             'node_modules/jquery-disable-with/dist/jquery-disable-with.min.js',
+            'node_modules/jquery-utc-time/dist/jquery-utc-time.min.js',
             'js/AiurCore.js'
         ],
         iscss: false,

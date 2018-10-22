@@ -37,6 +37,7 @@
     "jquery-progress-upload": "^1.1.2",
     "jquery-toast-plugin": "^1.3.1",
     "jquery-ui": "^1.12.1",
+    "jquery-utc-time": "^1.0.0",
     "jquery-validation": "^1.17.0",
     "jquery-validation-unobtrusive": "^3.2.10",
     "jquery.countdown": "^1.2.8",
