@@ -37,8 +37,8 @@ var packages = [
             'node_modules/jquery-validation/dist/jquery.validate.js',
             'node_modules/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js',
             'node_modules/clipboard/dist/clipboard.js',
-            'node_modules/jquery-disable-with/dist/jquery-disable-with.js',
-            'node_modules/jquery-utc-time/dist/jquery-utc-time.js',
+            'node_modules/jquery-disable-with/src/jquery-disable-with.js',
+            'node_modules/jquery-utc-time/src/jquery-utc-time.js',
             'js/AiurCore.js'
         ],
         iscss: false,
