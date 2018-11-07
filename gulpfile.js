@@ -30,15 +30,15 @@ var packages = [
     // AiurCore - JS
     {
         inputFiles: [
-            'node_modules/jquery/dist/jquery.min.js',
-            'node_modules/popper.js/dist/umd/popper.min.js',
-            'node_modules/bootstrap/dist/js/bootstrap.min.js',
-            'node_modules/jquery.easing/jquery.easing.min.js',
-            'node_modules/jquery-validation/dist/jquery.validate.min.js',
-            'node_modules/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js',
-            'node_modules/clipboard/dist/clipboard.min.js',
-            'node_modules/jquery-disable-with/dist/jquery-disable-with.min.js',
-            'node_modules/jquery-utc-time/dist/jquery-utc-time.min.js',
+            'node_modules/jquery/dist/jquery.js',
+            'node_modules/popper.js/dist/umd/popper.js',
+            'node_modules/bootstrap/dist/js/bootstrap.js',
+            'node_modules/jquery.easing/jquery.easing.js',
+            'node_modules/jquery-validation/dist/jquery.validate.js',
+            'node_modules/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js',
+            'node_modules/clipboard/dist/clipboard.js',
+            'node_modules/jquery-disable-with/dist/jquery-disable-with.js',
+            'node_modules/jquery-utc-time/dist/jquery-utc-time.js',
             'js/AiurCore.js'
         ],
         iscss: false,
