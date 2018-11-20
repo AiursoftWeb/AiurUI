@@ -1,5 +1,7 @@
 # AiurUI
 
+[![Build status](https://aiursoft.visualstudio.com/Nexus/_apis/build/status/Bundle%20AiurUI)](https://aiursoft.visualstudio.com/Nexus/_build/latest?definitionId=5)
+
 The place for shared static resources of Aiursoft web apps
 
 ## How to run
