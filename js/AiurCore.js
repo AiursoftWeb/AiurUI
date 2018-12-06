@@ -24,4 +24,12 @@ $(document).ready(function () {
         $('html, body').animate({ scrollTop: 0 }, 1000, 'easeInOutExpo');
         event.preventDefault();
     });
+
+    // init jquery-utc-time
+    $(this).initUTCTime({
+        daysAgo: ' days ago',
+        hoursAgo: ' hours ago',
+        minutesAgo: ' minutes ago',
+        secondsAgo: ' seconds ago'
+    });
 });
