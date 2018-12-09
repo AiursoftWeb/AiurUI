@@ -174,7 +174,7 @@ $(document).ready(function () {
         moreInfoLabel: 'More information'
     });
 
-    if ($.fn.ihavecookies.preference('marketing') === true) {
-        console.log('This should run because marketing is accepted.');
-    }
+    // if ($.fn.ihavecookies.preference('marketing') === true) {
+    //     console.log('This should run because marketing is accepted.');
+    // }
 });
