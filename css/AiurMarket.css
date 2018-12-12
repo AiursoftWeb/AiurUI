@@ -253,7 +253,7 @@ footer {
     right: 30px;
     bottom: 50px;
     max-width: 375px;
-    background-color: #24292e !important;
+    background-color: rgba(0,0,0,0.7) !important;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 6px 6px rgba(0,0,0,0.25);
