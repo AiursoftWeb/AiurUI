@@ -39,6 +39,7 @@ var packages = [
             'node_modules/clipboard/dist/clipboard.js',
             'node_modules/jquery-disable-with/src/jquery-disable-with.js',
             'node_modules/jquery-utc-time/src/jquery-utc-time.js',
+	        'node_modules/jquery-anything-clickable/src/jquery-anything-clickable.js',
             'js/AiurCore.js'
         ],
         iscss: false,
