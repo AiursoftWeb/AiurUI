@@ -1,6 +1,6 @@
 # AiurUI
 
-[![Build status](https://aiursoft.visualstudio.com/Nexus/_apis/build/status/Bundle%20AiurUI)](https://aiursoft.visualstudio.com/Nexus/_build/latest?definitionId=5)
+[![Build status](https://dev.azure.com/aiursofthk/Star/_apis/build/status/AiurUI%20CI)](https://dev.azure.com/aiursofthk/Star/_build/latest?definitionId=2)
 
 The place for shared static resources of Aiursoft web apps
 
