@@ -1,6 +1,6 @@
 # AiurUI
 
-[![Build status](https://dev.azure.com/aiursofthk/Star/_apis/build/status/AiurUI%20CI)](https://dev.azure.com/aiursofthk/Star/_build/latest?definitionId=2)
+[![Build status](https://aiursoft.visualstudio.com/Star/_apis/build/status/AiurUI%20Build)](https://aiursoft.visualstudio.com/Star/_build/latest?definitionId=2)
 
 The place for shared static resources of Aiursoft web apps
 
