@@ -1,8 +1,5 @@
 .vs
 lib
-*.lock.json
-package-lock.json
-*.user
 *.min.css
 *.min.js
 node_modules
