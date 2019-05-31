@@ -64,7 +64,7 @@ var packages = [
     // AiurProduct - CSS
     {
         inputFiles: [
-            'node_modules/primer/build/build.css',
+            'node_modules/@primer/css/dist/primer.css',
             'css/AiurProduct.css'
         ],
         iscss: true,
@@ -83,7 +83,7 @@ var packages = [
         inputFiles: [
             'node_modules/startbootstrap-sb-admin/css/sb-admin.css',
             'node_modules/datatables/media/css/jquery.dataTables.css',
-            'node_modules/primer-markdown/build/build.css',
+            'node_modules/@primer/css/dist/markdown.css',
             'node_modules/github-syntax-light/lib/github-light.css',
             'css/AiurDashboard.css'
         ],
