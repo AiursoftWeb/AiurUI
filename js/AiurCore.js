@@ -22,7 +22,7 @@ $(document).ready(function () {
         }
     });
 
-    $(document).on('click', 'a.aiur-scroll-to-top', (event) => {
+    $(document).on('click', 'a.aiur-scroll-to-top', function (event) {
         $('html, body').animate({ scrollTop: 0 }, 1000, 'easeInOutExpo');
         event.preventDefault();
     });
