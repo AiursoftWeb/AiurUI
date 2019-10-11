@@ -6,7 +6,7 @@ var cleancss = require('gulp-clean-css');
 var concat = require('gulp-concat');
 var flatten = require('gulp-flatten');
 var expect = require('gulp-expect-file');
-
+var babel = require('gulp-babel');
 var supportedfonts = [
     'node_modules/**/fonts/*.woff',
     'node_modules/**/fonts/*.woff2',
@@ -39,7 +39,7 @@ var packages = [
             'node_modules/clipboard/dist/clipboard.js',
             'node_modules/jquery-disable-with/src/jquery-disable-with.js',
             'node_modules/jquery-utc-time/src/jquery-utc-time.js',
-	        'node_modules/jquery-anything-clickable/src/jquery-anything-clickable.js',
+            'node_modules/jquery-anything-clickable/src/jquery-anything-clickable.js',
             'js/AiurCore.js'
         ],
         iscss: false,
@@ -102,31 +102,42 @@ var packages = [
     },
 ]
 
-gulp.task('clean', function () {
+gulp.task('clean', function (done) {
     del('dist/**/*');
     del('fonts/**/*');
+    done();
+});
+
+gulp.task('copy-fonts', function () {
+    return gulp.src(supportedfonts)
+        .pipe(flatten())
+        .pipe(gulp.dest('fonts'));
 })
 
-gulp.task("bundle", function (done) {
-    packages.forEach(function (package) {
-        gulp.src(supportedfonts)
-            .pipe(flatten())
-            .pipe(gulp.dest('fonts'));
-        if (package.iscss) {
-            gulp.src(package.inputFiles)
-                .pipe(expect(package.inputFiles))
-                .pipe(concat('temp'))
-                .pipe(cleancss())
-                .pipe(rename(package.outputFileName))
-                .pipe(gulp.dest('dist'));
-        } else {
-            gulp.src(package.inputFiles)
-                .pipe(expect(package.inputFiles))
-                .pipe(concat('temp'))
-                .pipe(uglify())
-                .pipe(rename(package.outputFileName))
-                .pipe(gulp.dest('dist'));
-        }
+gulp.task('css', function (done) {
+    packages.filter(t => t.iscss).forEach(function (package) {
+        gulp.src(package.inputFiles)
+            .pipe(expect(package.inputFiles))
+            .pipe(concat('temp'))
+            .pipe(cleancss())
+            .pipe(rename(package.outputFileName))
+            .pipe(gulp.dest('dist'));
     });
     done();
 });
+
+gulp.task('js', function (done) {
+    packages.filter(t => !t.iscss).forEach(function (package) {
+        gulp.src(package.inputFiles)
+            .pipe(expect(package.inputFiles))
+            .pipe(concat('temp'))
+            .pipe(babel({ compact: false, presets: ['@babel/preset-env'] }))
+            .pipe(uglify())
+            .pipe(rename(package.outputFileName))
+            .pipe(gulp.dest('dist'));
+    });
+    done();
+});
+
+gulp.task('bundle', gulp.series('clean', 'copy-fonts', 'css', 'js'));
+
