@@ -131,7 +131,7 @@ gulp.task('js', function (done) {
             .pipe(expect(package.inputFiles))
             .pipe(concat('temp'))
             .pipe(babel({ compact: false, presets: ['@babel/preset-env'] }))
-            .pipe(uglify())
+            //.pipe(uglify())
             .pipe(rename(package.outputFileName))
             .pipe(gulp.dest('dist'));
     });
