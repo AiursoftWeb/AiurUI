@@ -1,6 +1,6 @@
 'use strict';
 
-$(document).ready(() => {
+$(document).ready(function () {
     $('.datatable').dataTable({
         "pageLength": 15
     });

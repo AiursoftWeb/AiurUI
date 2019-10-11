@@ -6,15 +6,15 @@ $(document).ready(function () {
 
     // Activate tooltip tool
     $('[data-toggle="tooltip"]').tooltip();
-    $('[data-toggle="tooltip"]').on('click', () => {
-        setTimeout(() => {
+    $('[data-toggle="tooltip"]').on('click', function () {
+        setTimeout(function () {
             $('[data-toggle="tooltip"]').tooltip('hide');
         }, 2000);
     });
 
     //Aiur Scroll to top
-    $(document).scroll(() => {
-        const scrollDistance = $(this).scrollTop();
+    $(document).scroll(function () {
+        var scrollDistance = $(this).scrollTop();
         if (scrollDistance > 100) {
             $('.aiur-scroll-to-top').fadeIn();
         } else {

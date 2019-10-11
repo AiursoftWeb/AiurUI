@@ -6,7 +6,6 @@ var cleancss = require('gulp-clean-css');
 var concat = require('gulp-concat');
 var flatten = require('gulp-flatten');
 var expect = require('gulp-expect-file');
-var babel = require('gulp-babel');
 var supportedfonts = [
     'node_modules/**/fonts/*.woff',
     'node_modules/**/fonts/*.woff2',
@@ -130,8 +129,7 @@ gulp.task('js', function (done) {
         gulp.src(package.inputFiles)
             .pipe(expect(package.inputFiles))
             .pipe(concat('temp'))
-            .pipe(babel({ compact: false, presets: ['@babel/preset-env'] }))
-            //.pipe(uglify())
+            .pipe(uglify())
             .pipe(rename(package.outputFileName))
             .pipe(gulp.dest('dist'));
     });
