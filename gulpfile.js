@@ -79,7 +79,6 @@ var packages = [
     // AiurDashboard - CSS
     {
         inputFiles: [
-            'node_modules/startbootstrap-sb-admin/css/sb-admin.css',
             'node_modules/datatables/media/css/jquery.dataTables.css',
             'node_modules/primer-markdown/build/build.css',
             'node_modules/github-syntax-light/lib/github-light.css',
