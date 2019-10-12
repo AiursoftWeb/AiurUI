@@ -248,6 +248,7 @@
      }
      #mainNav.fixed-top .sidenav-toggler > .nav-item > .nav-link {
        padding: 1em;
+       padding-bottom: 30px;
      }
    }
    
