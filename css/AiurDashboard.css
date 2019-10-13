@@ -416,6 +416,17 @@ html {
     color: rgba(0, 0, 0, 0.5)!important;
   }
   
+  #mainNav.navbar-azure .navbar-collapse .navbar-sidenav > .nav-item .sidenav-second-level > li > a:focus, #mainNav.navbar-azure .navbar-collapse .navbar-sidenav > .nav-item .sidenav-second-level > li > a:hover,
+  #mainNav.navbar-azure .navbar-collapse .navbar-sidenav > .nav-item .sidenav-third-level > li > a:focus,
+  #mainNav.navbar-azure .navbar-collapse .navbar-sidenav > .nav-item .sidenav-third-level > li > a:hover {
+    color: rgba(0, 0, 0, 1)!important;
+    box-shadow: inset 4px 0 #0092D9!important;
+    background-color: #eff2f4!important;
+  }
+  #mainNav.navbar-azure .navbar-collapse .navbar-sidenav > .nav-item .sidenav-second-level > li > a,
+  #mainNav.navbar-azure .navbar-collapse .navbar-sidenav > .nav-item .sidenav-third-level > li > a {
+    color: rgba(0, 0, 0, 0.5)!important;
+  }
  }
  
  #mainNav.navbar-azure .navbar-collapse .navbar-sidenav .nav-link-collapse:after {
@@ -432,13 +443,13 @@ html {
  
  #mainNav.navbar-azure .navbar-collapse .navbar-sidenav > .nav-item .sidenav-second-level > li > a,
  #mainNav.navbar-azure .navbar-collapse .navbar-sidenav > .nav-item .sidenav-third-level > li > a {
-   color: rgba(0, 0, 0, 0.5);
+   color: rgba(255,255,255,.5);
  }
  
  #mainNav.navbar-azure .navbar-collapse .navbar-sidenav > .nav-item .sidenav-second-level > li > a:focus, #mainNav.navbar-azure .navbar-collapse .navbar-sidenav > .nav-item .sidenav-second-level > li > a:hover,
  #mainNav.navbar-azure .navbar-collapse .navbar-sidenav > .nav-item .sidenav-third-level > li > a:focus,
  #mainNav.navbar-azure .navbar-collapse .navbar-sidenav > .nav-item .sidenav-third-level > li > a:hover {
-   color: rgba(0, 0, 0, 0.7);
+   color: #f3f3f3;
  }
  
  #mainNav.navbar-azure .navbar-collapse .navbar-nav > .nav-item.dropdown > .nav-link:after {
