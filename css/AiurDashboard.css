@@ -407,6 +407,15 @@ html {
    #mainNav.navbar-azure .navbar-collapse .navbar-sidenav > .nav-item .sidenav-third-level {
      background: #343a40;
    }
+   #mainNav.navbar-azure .navbar-collapse .navbar-sidenav > .nav-item > .nav-link:hover {
+    color: rgba(0, 0, 0, 1)!important;
+    box-shadow: inset 4px 0 #0092D9!important;
+    background-color: #eff2f4!important;
+  }
+  #mainNav.navbar-azure .navbar-collapse .navbar-sidenav > .nav-item > .nav-link {
+    color: rgba(0, 0, 0, 0.5)!important;
+  }
+  
  }
  
  #mainNav.navbar-azure .navbar-collapse .navbar-sidenav .nav-link-collapse:after {
@@ -414,13 +423,11 @@ html {
  }
  
  #mainNav.navbar-azure .navbar-collapse .navbar-sidenav > .nav-item > .nav-link {
-   color: rgba(0, 0, 0, 0.5);
+   color: rgba(255,255,255,.5);
  }
  
  #mainNav.navbar-azure .navbar-collapse .navbar-sidenav > .nav-item > .nav-link:hover {
-   color: rgba(0, 0, 0, 1);
-   box-shadow: inset 4px 0 #0092D9;
-   background-color: #eff2f4;
+   color: #f3f3f3;
  }
  
  #mainNav.navbar-azure .navbar-collapse .navbar-sidenav > .nav-item .sidenav-second-level > li > a,
