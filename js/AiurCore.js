@@ -44,6 +44,9 @@ var asyncLayout = function (layoutQuery) {
                 if (href.startsWith('#')) {
                     return;
                 }
+                if($(this).attr("target") !== "_self") {
+                    return;
+                }
                 if (href.toLowerCase().startsWith('https')) {
                     return;
                 }
