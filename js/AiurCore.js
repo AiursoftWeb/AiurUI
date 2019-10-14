@@ -41,10 +41,11 @@ var asyncLayout = function (layoutQuery) {
         $(query).each(function () {
             $(this).click(function (e) {
                 var href = $(this).attr("href");
+                var target = $(this).attr("target")
                 if (href.startsWith('#')) {
                     return;
                 }
-                if($(this).attr("target").length > 0 && $(this).attr("target") !== "_self") {
+                if(target && target.length > 0 && target !== "_self") {
                     return;
                 }
                 if (href.toLowerCase().startsWith('https')) {
