@@ -59,6 +59,7 @@ var asyncLayout = function (layoutQuery) {
                             initUnder(layoutQuery + ' a[href]');
                             initForm();
                             dispatchEvent(new Event('load'));
+                            window.scrollTo(0, 0);
                             NProgress.done();
                         }, 1);
                     },
@@ -88,7 +89,9 @@ var asyncLayout = function (layoutQuery) {
                     window.history.pushState({ "html": data, "pageTitle": "" }, "", $(this).attr('action'));
                     setTimeout(function () {
                         initUnder(layoutQuery + ' a[href]');
+                        initForm();
                         dispatchEvent(new Event('load'));
+                        window.scrollTo(0, 0);
                         NProgress.done();
                     }, 1);
                 },
