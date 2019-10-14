@@ -21,6 +21,7 @@ var packages = [
         inputFiles: [
             'node_modules/bootstrap/dist/css/bootstrap.css',
             'node_modules/font-awesome/css/font-awesome.css',
+            'node_modules/nprogress/nprogress.css',
             'css/AiurCore.css'
         ],
         iscss: true,
@@ -31,6 +32,7 @@ var packages = [
         inputFiles: [
             'node_modules/jquery/dist/jquery.js',
             'node_modules/bootstrap/dist/js/bootstrap.bundle.js',
+            'node_modules/nprogress/nprogress.js',
             'node_modules/jquery.easing/jquery.easing.js',
             'node_modules/jquery-validation/dist/jquery.validate.js',
             'node_modules/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js',
