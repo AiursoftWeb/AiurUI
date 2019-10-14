@@ -21,7 +21,6 @@ var packages = [
         inputFiles: [
             'node_modules/bootstrap/dist/css/bootstrap.css',
             'node_modules/font-awesome/css/font-awesome.css',
-            'node_modules/nprogress/nprogress.css',
             'css/AiurCore.css'
         ],
         iscss: true,
