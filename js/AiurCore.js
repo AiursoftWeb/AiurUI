@@ -35,3 +35,70 @@ $(document).ready(function () {
         secondsAgo: ' seconds ago'
     });
 });
+
+var asyncLayout = function (layoutQuery) {
+    var initUnder = function (query) {
+        $(query).each(function () {
+            $(this).click(function (e) {
+                var href = $(this).attr("href");
+                if (href.startsWith('#')) {
+                    return;
+                }
+                if (href.toLowerCase().startsWith('https')) {
+                    return;
+                }
+                e.preventDefault();
+                NProgress.start();
+                $.ajax({
+                    url: href,
+                    headers: { "X-No-Layout": "true" },
+                    success: function (data) {
+                        $(layoutQuery).html(data);
+                        window.history.pushState({ "html": data, "pageTitle": "" }, "", href);
+                        setTimeout(function () {
+                            initUnder(layoutQuery + ' a[href]');
+                            initForm();
+                            dispatchEvent(new Event('load'));
+                            NProgress.done();
+                        }, 1);
+                    },
+                    error: function () {
+                        window.location = href;
+                    }
+                });
+            })
+        });
+    }
+
+    var initForm = function () {
+        $(layoutQuery + ' form').submit(function (e) {
+            var href = $(this).attr("action");
+            if (href.toLowerCase().startsWith('https')) {
+                return;
+            }
+            e.preventDefault();
+            NProgress.start();
+            $.ajax({
+                type: $(this).attr('method'),
+                url: $(this).attr('action'),
+                data: $(this).serialize(),
+                headers: { "X-No-Layout": "true" },
+                success: function (data) {
+                    $(layoutQuery).html(data);
+                    window.history.pushState({ "html": data, "pageTitle": "" }, "", $(this).attr('action'));
+                    setTimeout(function () {
+                        initUnder(layoutQuery + ' a[href]');
+                        dispatchEvent(new Event('load'));
+                        NProgress.done();
+                    }, 1);
+                },
+                error: function () {
+                    alert('Unknown error!');
+                }
+            });
+        });
+    }
+    
+    initUnder('a[href]');
+    initForm();
+}
