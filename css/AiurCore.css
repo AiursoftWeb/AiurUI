@@ -7,6 +7,14 @@ html {
     background-color: #e9ecf4;
 }
 
+.bg-azure {
+  background-color:#0082C9 !important
+}
+
+.bg-azure-light {
+  background-color:#e9ecf4!important
+}
+
 .ee-card {
     padding: 0;
     margin: 1.25rem;
