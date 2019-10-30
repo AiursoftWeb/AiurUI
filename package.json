@@ -20,6 +20,7 @@
     "angular": "^1.7.8",
     "animate.css": "^3.7.2",
     "arrow-js": "^0.1.9",
+    "autosize": "^4.0.2",
     "bootstrap": "^4.3.1",
     "bootstrap-fileinput": "^5.0.6",
     "bxslider": "^4.2.14",
