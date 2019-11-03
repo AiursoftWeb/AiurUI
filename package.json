@@ -59,6 +59,7 @@
     "owl.carousel": "^2.3.4",
     "popper.js": "^1.15.0",
     "primer": "^10.7.0",
+    "qrcode.js": "0.0.1",
     "rangy": "^1.3.0",
     "scrollreveal": "^4.0.5",
     "scrollup": "^1.0.1",
