@@ -51,6 +51,7 @@ var asyncLayout = function (layoutQuery) {
                 if (href.toLowerCase().startsWith('https')) {
                     return;
                 }
+                window.history.pushState({ "html": $("html").html(), "pageTitle": "" }, "", href);
                 e.preventDefault();
                 NProgress.start();
                 $.ajax({
@@ -58,7 +59,6 @@ var asyncLayout = function (layoutQuery) {
                     headers: { "X-No-Layout": "true" },
                     success: function (data) {
                         $(layoutQuery).html(data);
-                        window.history.pushState({ "html": data, "pageTitle": "" }, "", href);
                         setTimeout(function () {
                             initUnder(layoutQuery + ' a[href]');
                             initForm();
