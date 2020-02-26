@@ -69,6 +69,7 @@ var asyncLayout = function (layoutQuery) {
                     },
                     error: function () {
                         window.location = href;
+                        NProgress.done();
                     }
                 });
             })
@@ -101,6 +102,7 @@ var asyncLayout = function (layoutQuery) {
                 },
                 error: function () {
                     alert('Unknown error!');
+                    NProgress.done();
                 }
             });
         });
