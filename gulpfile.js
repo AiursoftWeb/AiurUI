@@ -98,7 +98,7 @@ var packages = [
         ],
         iscss: false,
         outputFileName: 'AiurDashboard.min.js'
-    },
+    }
 ]
 
 gulp.task('clean', function (done) {
