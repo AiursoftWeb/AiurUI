@@ -79,7 +79,7 @@ var asyncLayout = function (layoutQuery) {
     var initForm = function () {
         $(layoutQuery + ' form').submit(function (e) {
             var href = $(this).attr("action");
-            if (href.toLowerCase().startsWith('https')) {
+            if (href && href.toLowerCase().startsWith('https')) {
                 return;
             }
             e.preventDefault();
