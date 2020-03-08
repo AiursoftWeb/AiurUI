@@ -1,6 +1,6 @@
 'use strict';
-
-$(document).ready(function () {
+// Trigger everytime full page load and part page load.
+window.addEventListener('load', function () {
     // Activate clipboard tool
     new ClipboardJS('[data-clipboard-text]');
 
@@ -11,22 +11,10 @@ $(document).ready(function () {
             $('[data-toggle="tooltip"]').tooltip('hide');
         }, 2000);
     });
+});
 
-    //Aiur Scroll to top
-    $(document).scroll(function () {
-        var scrollDistance = $(this).scrollTop();
-        if (scrollDistance > 100) {
-            $('.aiur-scroll-to-top').fadeIn();
-        } else {
-            $('.aiur-scroll-to-top').fadeOut();
-        }
-    });
-
-    $(document).on('click', 'a.aiur-scroll-to-top', function (event) {
-        $('html, body').animate({ scrollTop: 0 }, 1000, 'easeInOutExpo');
-        event.preventDefault();
-    });
-
+// Trigger only full page load.
+$(document).ready(function () {
     // init jquery-utc-time
     $(this).initUTCTime({
         daysAgo: ' days ago',
