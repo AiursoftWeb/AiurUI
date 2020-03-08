@@ -1,7 +1,8 @@
 'use strict';
 
-$(document).ready(function () {
-    $('.datatable').dataTable({
+window.addEventListener('load', function () {
+    $('.datatable').DataTable().destroy();
+    $('.datatable').DataTable({
         "pageLength": 15
     });
 });
