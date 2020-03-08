@@ -699,3 +699,7 @@ html {
       cursor: not-allowed;
       background-color: #ffffff;
   }
+
+  #nprogress .bar {
+      background: #29d !important;
+  }
