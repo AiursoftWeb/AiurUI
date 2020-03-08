@@ -703,3 +703,8 @@ html {
   #nprogress .bar {
       background: #eee !important;
   }
+
+  #nprogress .spinner-icon {
+    border-top-color: #eee;
+    border-left-color: #eee;
+  }
