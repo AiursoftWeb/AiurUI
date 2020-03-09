@@ -64,8 +64,8 @@ var asyncLayout = function (layoutQuery) {
         });
     }
 
-    var initForm = function () {
-        $(layoutQuery + ' form').submit(function (e) {
+    var initForm = function (query) {
+        $(query).submit(function (e) {
             var href = $(this).attr("action");
             if (href && href.toLowerCase().startsWith('https')) {
                 return;
@@ -96,6 +96,9 @@ var asyncLayout = function (layoutQuery) {
         });
     }
     
+    // All links even out of layout shall have async effects.
     initUnder('a[href]');
-    initForm();
+
+    // Only forms inside the layout shall have async effects.
+    initForm(layoutQuery + ' form');
 }
