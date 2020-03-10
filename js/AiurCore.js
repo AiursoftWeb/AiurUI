@@ -49,7 +49,7 @@ var asyncLayout = function (layoutQuery) {
                         $(layoutQuery).html(data);
                         setTimeout(function () {
                             initUnder(layoutQuery + ' a[href]');
-                            initForm();
+                            initForm(layoutQuery + ' form');
                             dispatchEvent(new Event('load'));
                             window.scrollTo(0, 0);
                             NProgress.done();
@@ -82,7 +82,7 @@ var asyncLayout = function (layoutQuery) {
                     window.history.pushState({ "html": data, "pageTitle": "" }, "", $(this).attr('action'));
                     setTimeout(function () {
                         initUnder(layoutQuery + ' a[href]');
-                        initForm();
+                        initForm(layoutQuery + ' form');
                         dispatchEvent(new Event('load'));
                         window.scrollTo(0, 0);
                         NProgress.done();
