@@ -15,6 +15,10 @@ html {
   color:#0082C9 !important
 }
 
+.btn-warning {
+    background-color: #fab100!important;
+    color: white!important;
+}
 
 .bg-azure-light {
   background-color:#e9ecf4!important
