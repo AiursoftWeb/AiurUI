@@ -8,13 +8,18 @@ if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').match
     $('body').css('color', 'white');
     $('.container-fluid').addClass('bg-dark');
     $('.container-fluid').css('color', 'white');
+    $('.content-wrapper').addClass('bg-dark');
+    $('.content-wrapper').css('color', 'white');
     $('.card').addClass('bg-dark');
     $('.bg-light').addClass('bg-dark');
     $('.bg-light').removeClass('bg-light');
     $('.bg-white').addClass('bg-dark');
     $('.bg-white').removeClass('bg-white');
-    $('.bd-footer').css('background-color', '#34393e!important');
+    $('.bd-footer').addClass('bg-dark');
     $('.jumbotron').css('background-color', '#191c20');
+    $('.breadcrumb').css('background-color', 'rgb(42, 43, 45)');
+    $('pre').css('background-color', 'rgb(42, 43, 45)');
+    //breadcrumb ;
 }
 
 // Trigger everytime full page load and part page load.
