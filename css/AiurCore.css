@@ -11,6 +11,15 @@ html {
   background-color:#0082C9 !important
 }
 
+
+@media (prefers-color-scheme: dark) {  
+    .bg-light {    
+        background-color: #343a40!important;
+        color:white;
+    }
+}
+    
+
 .text-azure {
   color:#0082C9 !important
 }
