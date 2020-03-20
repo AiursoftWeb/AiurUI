@@ -1,4 +1,23 @@
 'use strict';
+// Replace dark theme class
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    return;
+    // dark mode
+    $('.navbar-light').addClass('navbar-dark');
+    $('.navbar-light').removeClass('navbar-light');
+    $('body').addClass('bg-dark');
+    $('body').css('color', 'white');
+    $('.container-fluid').addClass('bg-dark');
+    $('.container-fluid').css('color', 'white');
+    $('.card').addClass('bg-dark');
+    $('.bg-light').addClass('bg-dark');
+    $('.bg-light').removeClass('bg-light');
+    $('.bg-white').addClass('bg-dark');
+    $('.bg-white').removeClass('bg-white');
+    $('.bd-footer').css('background-color', '#34393e!important');
+    $('.jumbotron').css('background-color', '#191c20');
+}
+
 // Trigger everytime full page load and part page load.
 window.addEventListener('load', function () {
     // Activate clipboard tool
