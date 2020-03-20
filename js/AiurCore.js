@@ -29,6 +29,7 @@ var initDarkTheme = function () {
         $('code').css('color', '#fff');
     }
 }
+initDarkTheme();
 
 // Trigger everytime full page load and part page load.
 window.addEventListener('load', function () {
