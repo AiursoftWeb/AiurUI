@@ -6,6 +6,8 @@ if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').match
     $('.navbar-light').removeClass('navbar-light');
     $('body').addClass('bg-dark');
     $('body').css('color', 'white');
+    $('.modal-content').addClass('bg-dark');
+    $('.modal-content').css('color', 'white');
     $('.container-fluid').addClass('bg-dark');
     $('.container-fluid').css('color', 'white');
     $('.content-wrapper').addClass('bg-dark');
