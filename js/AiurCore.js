@@ -1,7 +1,6 @@
 'use strict';
 // Replace dark theme class
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    return;
     // dark mode
     $('.navbar-light').addClass('navbar-dark');
     $('.navbar-light').removeClass('navbar-light');
