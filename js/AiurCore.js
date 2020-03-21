@@ -30,6 +30,7 @@ var initDarkTheme = function () {
         $('.form-control').css('background-color', 'rgb(35, 36, 37)');
         $('.form-control').css('color', 'rgb(240, 234, 224)');
         $('.form-control').css('border-color', 'rgb(71, 79, 87)');
+        $('table').addClass('table-dark');
     }
 }
 initDarkTheme();
