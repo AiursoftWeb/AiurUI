@@ -230,7 +230,7 @@ body.fixed-nav {
 @media (min-width: 992px) {
   #mainNav.fixed-top .navbar-sidenav {
     height: calc(100vh - 112px);
-    background: #fafafa !important;
+    /* background: #fafafa !important;*/
     border-right: 1px solid rgba(0, 0, 0, .125) !important;
   }
   #mainNav.fixed-top .sidenav-toggler {
@@ -379,38 +379,6 @@ body.sidenav-toggled .navbar-sidenav-tooltip.show {
   color: #adb5bd;
 }
 
-@media (min-width: 992px) {
-  #mainNav.navbar-azure .navbar-collapse .navbar-sidenav {
-    background: #343a40;
-  }
-  #mainNav.navbar-azure .navbar-collapse .navbar-sidenav li.active a {
-    opacity: 1;
-    box-shadow: inset 4px 0 #0082C9;
-  }
-  #mainNav.navbar-azure .navbar-collapse .navbar-sidenav li.active a:focus, #mainNav.navbar-azure .navbar-collapse .navbar-sidenav li.active a:hover {
-    color: white;
-  }
-  #mainNav.navbar-azure .navbar-collapse .navbar-sidenav>.nav-item .sidenav-second-level, #mainNav.navbar-azure .navbar-collapse .navbar-sidenav>.nav-item .sidenav-third-level {
-    background: #343a40;
-  }
-  #mainNav.navbar-azure .navbar-collapse .navbar-sidenav>.nav-item>.nav-link:hover {
-    color: rgba(0, 0, 0, 1)!important;
-    box-shadow: inset 4px 0 #0092D9!important;
-    background-color: #eff2f4!important;
-  }
-  #mainNav.navbar-azure .navbar-collapse .navbar-sidenav>.nav-item>.nav-link {
-    color: rgba(0, 0, 0, 0.5)!important;
-  }
-  #mainNav.navbar-azure .navbar-collapse .navbar-sidenav>.nav-item .sidenav-second-level>li>a:focus, #mainNav.navbar-azure .navbar-collapse .navbar-sidenav>.nav-item .sidenav-second-level>li>a:hover, #mainNav.navbar-azure .navbar-collapse .navbar-sidenav>.nav-item .sidenav-third-level>li>a:focus, #mainNav.navbar-azure .navbar-collapse .navbar-sidenav>.nav-item .sidenav-third-level>li>a:hover {
-    color: rgba(0, 0, 0, 1)!important;
-    box-shadow: inset 4px 0 #0092D9!important;
-    background-color: #eff2f4!important;
-  }
-  #mainNav.navbar-azure .navbar-collapse .navbar-sidenav>.nav-item .sidenav-second-level>li>a, #mainNav.navbar-azure .navbar-collapse .navbar-sidenav>.nav-item .sidenav-third-level>li>a {
-    color: rgba(0, 0, 0, 0.5)!important;
-  }
-}
-
 #mainNav.navbar-azure .navbar-collapse .navbar-sidenav .nav-link-collapse:after {
   color: rgba(0, 0, 0, 0.5);
 }
@@ -436,9 +404,26 @@ body.sidenav-toggled .navbar-sidenav-tooltip.show {
 }
 
 @media (min-width: 992px) {
+
   #mainNav.navbar-azure .navbar-collapse .navbar-sidenav {
     background: #f8f9fa;
   }
+
+  #mainNav.navbar-azure .navbar-collapse .navbar-sidenav>.nav-item>.nav-link {
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  #mainNav.navbar-azure .navbar-collapse .navbar-sidenav>.nav-item>.nav-link:hover {
+    color: rgba(0, 0, 0, 1)!important;
+    box-shadow: inset 4px 0 #0092D9!important;
+    background-color: #eff2f4!important;
+  }
+
+  #mainNav.navbar-azure .navbar-collapse .navbar-sidenav li.active a {
+    opacity: 1;
+    box-shadow: inset 4px 0 #0082C9;
+  }
+
   #mainNav.navbar-azure .navbar-collapse .navbar-sidenav li.active a {
     color: #000 !important;
     background-color: #e9ecef;
@@ -446,8 +431,61 @@ body.sidenav-toggled .navbar-sidenav-tooltip.show {
   #mainNav.navbar-azure .navbar-collapse .navbar-sidenav li.active a:focus, #mainNav.navbar-azure .navbar-collapse .navbar-sidenav li.active a:hover {
     color: #000;
   }
+
   #mainNav.navbar-azure .navbar-collapse .navbar-sidenav>.nav-item .sidenav-second-level, #mainNav.navbar-azure .navbar-collapse .navbar-sidenav>.nav-item .sidenav-third-level {
     background: #f8f9fa;
+  }
+
+  #mainNav.navbar-azure .navbar-collapse .navbar-sidenav>.nav-item .sidenav-second-level>li>a, #mainNav.navbar-azure .navbar-collapse .navbar-sidenav>.nav-item .sidenav-third-level>li>a {
+    color: rgba(0, 0, 0, 0.5)!important;
+  }
+
+  #mainNav.navbar-azure .navbar-collapse .navbar-sidenav>.nav-item .sidenav-second-level>li>a:focus, #mainNav.navbar-azure .navbar-collapse .navbar-sidenav>.nav-item .sidenav-second-level>li>a:hover, #mainNav.navbar-azure .navbar-collapse .navbar-sidenav>.nav-item .sidenav-third-level>li>a:focus, #mainNav.navbar-azure .navbar-collapse .navbar-sidenav>.nav-item .sidenav-third-level>li>a:hover {
+    color: rgba(0, 0, 0, 1)!important;
+    box-shadow: inset 4px 0 #0092D9!important;
+    background-color: #eff2f4!important;
+  }
+
+  @media (prefers-color-scheme: dark) {
+      
+    #mainNav.navbar-azure .navbar-collapse .navbar-sidenav {
+      background: #343a40;
+      color: white;
+    }
+
+
+    #mainNav.navbar-azure .navbar-collapse .navbar-sidenav>.nav-item>.nav-link {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    #mainNav.navbar-azure .navbar-collapse .navbar-sidenav>.nav-item>.nav-link:hover {
+      color: white!important;
+      background-color: #ffffff22!important;
+    }
+
+    #mainNav.navbar-azure .navbar-collapse .navbar-sidenav li.active a {
+      color: #fff !important;
+      background-color: #ffffff11;
+    }
+
+    #mainNav.navbar-azure .navbar-collapse .navbar-sidenav li.active a:focus, #mainNav.navbar-azure .navbar-collapse .navbar-sidenav li.active a:hover {
+      color: white;
+    }
+
+    #mainNav.navbar-azure .navbar-collapse .navbar-sidenav>.nav-item .sidenav-second-level>li>a, #mainNav.navbar-azure .navbar-collapse .navbar-sidenav>.nav-item .sidenav-third-level>li>a {
+      color: rgba(255, 255, 255, 0.5)!important;
+    }
+
+    #mainNav.navbar-azure .navbar-collapse .navbar-sidenav>.nav-item .sidenav-second-level, #mainNav.navbar-azure .navbar-collapse .navbar-sidenav>.nav-item .sidenav-third-level {
+      background: #343a40;
+      color: rgba(255, 255, 255, 0.5) !important;
+    }
+
+    #mainNav.navbar-azure .navbar-collapse .navbar-sidenav>.nav-item .sidenav-second-level>li>a:focus, #mainNav.navbar-azure .navbar-collapse .navbar-sidenav>.nav-item .sidenav-second-level>li>a:hover, #mainNav.navbar-azure .navbar-collapse .navbar-sidenav>.nav-item .sidenav-third-level>li>a:focus, #mainNav.navbar-azure .navbar-collapse .navbar-sidenav>.nav-item .sidenav-third-level>li>a:hover {
+      background-color: #ffffff22!important;
+      color: white!important;
+    }
+
   }
 }
 
