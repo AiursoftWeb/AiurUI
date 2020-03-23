@@ -54,4 +54,37 @@ html {
     .dropify-preview {
         background-color: rgb(42, 43, 45)!important;
     }
+
+    .text-muted {
+        color: #8c959d!important;
+    }
+
+    .content-wrapper {
+        color: white!important;
+    }
+
+    .jumbotron {
+        background-color: rgb(30, 32, 36)!important;
+    }
+
+    .breadcrumb {
+        background-color: rgb(42, 43, 45)!important
+    }
+
+    pre {
+        background-color: #444!important;
+        color: #fff!important;
+    }
+
+    code {
+        background-color: #444!important;
+        color: #fff!important;
+    }
+
+    .form-control {
+        background-color: rgb(35, 36, 37)!important;
+        color: rgb(240, 234, 224)!important;
+        border-color: rgb(71, 79, 87)!important;
+    }
 }
+

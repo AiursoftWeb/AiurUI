@@ -14,22 +14,12 @@ var initDarkTheme = function () {
         $('.list-group-item').addClass('bg-dark');
         $('.list-group-item').css('color', 'white');
         $('.content-wrapper').addClass('bg-dark');
-        $('.content-wrapper').css('color', 'white');
         $('.card').addClass('bg-dark');
         $('.bg-light').addClass('bg-dark');
         $('.bg-light').removeClass('bg-light');
         $('.bg-white').addClass('bg-dark');
         $('.bg-white').removeClass('bg-white');
         $('.bd-footer').addClass('bg-dark');
-        $('.jumbotron').css('background-color', 'rgb(30, 32, 36)');
-        $('.breadcrumb').css('background-color', 'rgb(42, 43, 45)');
-        $('pre').css('background-color', '#444');
-        $('code').css('background-color', '#444');
-        $('pre').css('color', '#fff');
-        $('code').css('color', '#fff');
-        $('.form-control').css('background-color', 'rgb(35, 36, 37)');
-        $('.form-control').css('color', 'rgb(240, 234, 224)');
-        $('.form-control').css('border-color', 'rgb(71, 79, 87)');
         $('table').addClass('table-dark');
     }
 }
