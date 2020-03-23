@@ -592,7 +592,7 @@ footer.sticky-footer {
 
 @media (prefers-color-scheme: dark) {
   footer.sticky-footer {
-    background-color: #000;
+    background-color: rgb(42, 43, 45);
   }
 }
 
