@@ -54,6 +54,11 @@ html {
     .dropify-preview {
         background-color: rgb(42, 43, 45)!important;
     }
+
+    .dropify-wrapper {
+        background-color: rgb(32, 33, 35)!important;
+    }
+
     .text-muted {
         color: #8c959d!important;
     }
