@@ -54,11 +54,10 @@ html {
     .dropify-preview {
         background-color: rgb(42, 43, 45)!important;
     }
-
     .dropify-wrapper {
         background-color: rgb(32, 33, 35)!important;
+        border: 2px solid #666!important;
     }
-
     .text-muted {
         color: #8c959d!important;
     }
@@ -87,7 +86,6 @@ html {
     .navbar-dark {
         box-shadow: 0 10px 39px -6px rgba(0, 0, 0, 0.3);
     }
-
     .custom-select {
         color: white!important;
         background-color: #495057!important;
