@@ -54,10 +54,16 @@ html {
     .dropify-preview {
         background-color: rgb(42, 43, 45)!important;
     }
+
     .dropify-wrapper {
         background-color: rgb(32, 33, 35)!important;
         border: 2px solid #666!important;
     }
+
+    .dropify-wrapper:hover {
+        background-image: linear-gradient(-45deg,#161616 25%,transparent 25%,transparent 50%,#161616 50%,#161616 75%,transparent 75%,transparent)!important;
+    }
+
     .text-muted {
         color: #8c959d!important;
     }
