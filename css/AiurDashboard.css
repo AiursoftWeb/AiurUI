@@ -388,10 +388,6 @@ body.sidenav-toggled .navbar-sidenav-tooltip.show {
   display: flex;
 }
 
-#mainNav.navbar-azure .navbar-collapse .navbar-sidenav .nav-link-collapse:after {
-  color: #868e96;
-}
-
 #mainNav.navbar-azure .navbar-collapse .navbar-sidenav>.nav-item>.nav-link {
   color: #868e96;
 }
@@ -497,10 +493,13 @@ body.sidenav-toggled .navbar-sidenav-tooltip.show {
   @media (prefers-color-scheme: dark) {
 
     #mainNav.navbar-azure .navbar-collapse .navbar-sidenav {
-      background: #343a40;
+      background: #242a30;
       color: white;
     }
 
+    #mainNav.navbar-azure .navbar-collapse .navbar-sidenav .nav-link-collapse:after {
+      color: rgba(255,255,255,.4);
+    }
 
     #mainNav.navbar-azure .navbar-collapse .navbar-sidenav>.nav-item>.nav-link {
       color: rgba(255, 255, 255, 0.5);
