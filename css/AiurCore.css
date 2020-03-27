@@ -87,4 +87,9 @@ html {
     .navbar-dark {
         box-shadow: 0 10px 39px -6px rgba(0, 0, 0, 0.3);
     }
+
+    .custom-select {
+        color: white!important;
+        background-color: #495057!important;
+    }
 }
