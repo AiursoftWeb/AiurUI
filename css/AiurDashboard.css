@@ -440,7 +440,7 @@ body.sidenav-toggled .navbar-sidenav-tooltip.show {
       background-color: #343a40!important;
     }
     .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_paginate, .dataTables_wrapper .dataTables_processing {
-      color: white
+      color: white!important;
     }
     #mainNav.navbar-azure .navbar-collapse .navbar-sidenav {
       background: #242a30;
