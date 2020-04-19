@@ -702,4 +702,13 @@ footer.sticky-footer {
   .markdown-body table tr:nth-child(2n) {
     background-color: rgb(38, 39, 41);
   }
+
+  
+  .pagination>li>a,.pagination>li>span {
+    background-color: #333!important;
+  }
+
+  .pagination>.disabled>a,.pagination>.disabled>a:focus,.pagination>.disabled>a:hover,.pagination>.disabled>span {
+    background-color: #000!important;
+}
 }
