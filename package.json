@@ -5,6 +5,7 @@
   "scripts": {
     "start": "static -p 5002",
     "bundle": "gulp bundle",
+    "build": "webpack --config webpack.config.js --mode=production",
     "clean": "gulp clean"
   },
   "repository": {
@@ -85,6 +86,8 @@
     "gulp-flatten": "^0.4.0",
     "gulp-rename": "^1.4.0",
     "gulp-uglify": "^3.0.2",
-    "node-static": "^0.7.11"
+    "node-static": "^0.7.11",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11"
   }
 }

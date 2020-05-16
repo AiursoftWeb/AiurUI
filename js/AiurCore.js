@@ -1,4 +1,14 @@
 'use strict';
+import $ from 'jquery';
+import 'bootstrap';
+import 'nprogress';
+import 'jquery-validation';
+import 'jquery-validation-unobtrusive';
+import 'clipboard';
+import 'jquery-disable-with';
+import 'jquery-utc-time';
+import 'jquery-anything-clickable';
+
 var initDarkTheme = function () {
     // Replace dark theme class
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
