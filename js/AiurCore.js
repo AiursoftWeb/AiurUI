@@ -41,6 +41,16 @@ window.addEventListener('load', function () {
             $('[data-toggle="tooltip"]').tooltip('hide');
         }, 2000);
     });
+
+    var setLanguageLink = function () {
+        var link = $('[data-language-change-link]').attr('href');
+        var host = encodeURIComponent(this.window.location.origin);
+        var path = encodeURIComponent(this.window.location.pathname + this.window.location.search);
+        link = `${link}?host=${host}&path=${path}`;
+        $('[data-language-change-link]').attr("href", link);
+    }
+
+    setLanguageLink();
 });
 
 // Trigger only full page load.
