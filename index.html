@@ -338,7 +338,7 @@
                     <div class="col-md-6 mb-3">
                         <div class="card h-100">
                             <div class="card-header">
-                                <i class="fa fa-clock-o"></i> Running Example
+                                <i class="fa fa-clock-o"></i> UTC Time system
                             </div>
                             <div class="card-body">
                                 <h4>Page render time</h4>
@@ -352,6 +352,28 @@
             
                                 <h4>Two days before page render</h4>
                                 <kbd data-utc-time="5/15/2020 7:53:43 AM"></kbd>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <div class="card h-100">
+                            <div class="card-header">
+                                <i class="fa fa-clock-o"></i> jQuery in view
+                            </div>
+                            <div class="card-body">
+                                <h4 id="jqueryCalculated">1 + 1 = </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <div class="card h-100">
+                            <div class="card-header">
+                                <i class="fa fa-clock-o"></i> Anything clickable
+                            </div>
+                            <div class="card-body">
+                                <img data-href="https://www.kahla.app" src="https://ui.cdn.aiursoft.com/images/kahla-demo-wide.png" class="img-fluid">
                             </div>
                         </div>
                     </div>
@@ -402,7 +424,11 @@
         </div>
         <script src="./dist/AiurCore.min.js"></script>
         <script src="./dist/AiurDashboard.min.js"></script>
-
+        <script>
+            var value = $('#jqueryCalculated').html();
+            value = value + "2";
+            $('#jqueryCalculated').html(value);
+        </script>
     </div>
 </body>
 

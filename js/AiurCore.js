@@ -7,6 +7,7 @@ import Clipboard from 'clipboard'
 //import 'jquery-disable-with';
 import { UtcTime } from 'jquery-utc-time';
 import { Clickable } from 'jquery-anything-clickable';
+window.$ = $;
 
 var initDarkTheme = function () {
     // Replace dark theme class
@@ -66,6 +67,7 @@ $(function () {
 
     setLanguageLink();
 });
+
 
 var asyncLayout = function (layoutQuery) {
     var initUnder = function (query) {
