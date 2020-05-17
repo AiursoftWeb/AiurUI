@@ -5,9 +5,9 @@ import 'nprogress';
 import 'jquery-validation';
 import 'jquery-validation-unobtrusive';
 import 'clipboard';
-import 'jquery-disable-with';
-// import 'jquery-utc-time';
-// import 'jquery-anything-clickable';
+//import 'jquery-disable-with';
+import 'jquery-utc-time';
+import 'jquery-anything-clickable';
 
 var initDarkTheme = function () {
     // Replace dark theme class
@@ -45,7 +45,12 @@ window.addEventListener('load', function () {
     new ClipboardJS('[data-clipboard-text]');
 
     new DisableWith('data-disable-with');
+
+    new Clickable('data-href');
     
+    // init jquery-utc-time
+    new UtcTime({ });
+
     // Activate tooltip tool
     $('[data-toggle="tooltip"]').tooltip();
     $('[data-toggle="tooltip"]').on('click', function () {
@@ -63,17 +68,6 @@ window.addEventListener('load', function () {
     }
 
     setLanguageLink();
-});
-
-// Trigger only full page load.
-$(document).ready(function () {
-    // init jquery-utc-time
-    $(this).initUTCTime({
-        daysAgo: ' days ago',
-        hoursAgo: ' hours ago',
-        minutesAgo: ' minutes ago',
-        secondsAgo: ' seconds ago'
-    });
 });
 
 var asyncLayout = function (layoutQuery) {
