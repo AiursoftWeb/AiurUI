@@ -44,6 +44,8 @@ window.addEventListener('load', function () {
     // Activate clipboard tool
     new ClipboardJS('[data-clipboard-text]');
 
+    new DisableWith('data-disable-with');
+    
     // Activate tooltip tool
     $('[data-toggle="tooltip"]').tooltip();
     $('[data-toggle="tooltip"]').on('click', function () {
