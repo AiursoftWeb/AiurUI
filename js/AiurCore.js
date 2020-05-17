@@ -1,13 +1,12 @@
-'use strict';
 import $ from 'jquery';
 import 'bootstrap';
 import 'nprogress';
 import 'jquery-validation';
 import 'jquery-validation-unobtrusive';
-import 'clipboard';
+import Clipboard from 'clipboard'
 //import 'jquery-disable-with';
-import 'jquery-utc-time';
-import 'jquery-anything-clickable';
+import { UtcTime } from 'jquery-utc-time';
+import { Clickable } from 'jquery-anything-clickable';
 
 var initDarkTheme = function () {
     // Replace dark theme class
@@ -37,19 +36,17 @@ initDarkTheme();
 
 window.matchMedia('(prefers-color-scheme: dark)').addListener(initDarkTheme);
 
-// Trigger everytime full page load and part page load.
-window.addEventListener('load', function () {
+$(function () {
     initDarkTheme();
 
     // Activate clipboard tool
-    new ClipboardJS('[data-clipboard-text]');
+    new Clipboard('[data-clipboard-text]', { });
 
-    new DisableWith('data-disable-with');
+    //new DisableWith('data-disable-with');
+
+    new UtcTime({});
 
     new Clickable('data-href');
-    
-    // init jquery-utc-time
-    new UtcTime({ });
 
     // Activate tooltip tool
     $('[data-toggle="tooltip"]').tooltip();
@@ -61,8 +58,8 @@ window.addEventListener('load', function () {
 
     var setLanguageLink = function () {
         var link = $('[data-language-change-link]').attr('href');
-        var host = encodeURIComponent(this.window.location.origin);
-        var path = encodeURIComponent(this.window.location.pathname + this.window.location.search);
+        var host = encodeURIComponent(window.location.origin);
+        var path = encodeURIComponent(window.location.pathname + window.location.search);
         link = link + "?host=" + host + "&path=" + path;
         $('[data-language-change-link]').attr("href", link);
     }

@@ -27,24 +27,6 @@ var packages = [
         iscss: true,
         outputFileName: 'AiurCore.min.css'
     },
-    // AiurCore - JS
-    {
-        inputFiles: [
-            'node_modules/jquery/dist/jquery.js',
-            'node_modules/bootstrap/dist/js/bootstrap.bundle.js',
-            'node_modules/nprogress/nprogress.js',
-            'node_modules/jquery.easing/jquery.easing.js',
-            'node_modules/jquery-validation/dist/jquery.validate.js',
-            'node_modules/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js',
-            'node_modules/clipboard/dist/clipboard.js',
-            'node_modules/jquery-disable-with/src/jquery-disable-with.js',
-            'node_modules/jquery-utc-time/src/jquery-utc-time.js',
-            'node_modules/jquery-anything-clickable/src/jquery-anything-clickable.js',
-            'js/AiurCore.js'
-        ],
-        iscss: false,
-        outputFileName: 'AiurCore.min.js'
-    },
     // AiurMarket - CSS
     {
         inputFiles: [
@@ -88,16 +70,6 @@ var packages = [
         ],
         iscss: true,
         outputFileName: 'AiurDashboard.min.css'
-    },
-    // AiurDashboard - JS
-    {
-        inputFiles: [
-            'node_modules/startbootstrap-sb-admin/js/sb-admin.js',
-            'node_modules/datatables/media/js/jquery.dataTables.js',
-            'js/AiurDashboard.js'
-        ],
-        iscss: false,
-        outputFileName: 'AiurDashboard.min.js'
     }
 ]
 
