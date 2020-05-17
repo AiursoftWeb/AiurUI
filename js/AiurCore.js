@@ -6,8 +6,8 @@ import 'jquery-validation';
 import 'jquery-validation-unobtrusive';
 import 'clipboard';
 import 'jquery-disable-with';
-import 'jquery-utc-time';
-import 'jquery-anything-clickable';
+// import 'jquery-utc-time';
+// import 'jquery-anything-clickable';
 
 var initDarkTheme = function () {
     // Replace dark theme class
