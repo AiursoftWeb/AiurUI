@@ -7,10 +7,11 @@ $(function () {
         "pageLength": 15
     });
 
-    $("#sidebarToggle").on('click', function (e) {
+    $("#sidenavToggler").click(function(e) {
         e.preventDefault();
-        $("body").toggleClass("sidebar-toggled");
-        $(".sidebar").toggleClass("toggled");
+        $("body").toggleClass("sidenav-toggled");
+        $(".navbar-sidenav .nav-link-collapse").addClass("collapsed");
+        $(".navbar-sidenav .sidenav-second-level, .navbar-sidenav .sidenav-third-level").removeClass("show");
     });
 
     // Prevent the content wrapper from scrolling when the fixed side navigation hovered over
