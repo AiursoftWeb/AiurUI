@@ -44,7 +44,7 @@ $(function () {
 
     //new DisableWith('data-disable-with');
 
-    new UtcTime({});
+    new UtcTime({ });
 
     new Clickable('data-href');
 

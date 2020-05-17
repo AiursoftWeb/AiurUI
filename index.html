@@ -305,49 +305,57 @@
                     </li>
                     <li class="breadcrumb-item active">Home</li>
                 </ol>
-                <article>
-                    <div class="markdown-body">
-                        <h1 id="welcome-to-the-aiursoft-developer-center">Welcome to the Aiursoft Developer Center</h1>
-                        <p>Welcome!</p>
-                        <p>The current documentation is the center of all learning, access, and contributions to the
-                            Aiursoft technology stack.</p>
-                        <pre><code>Note: Please note that please do not mention all Issues to this Repo, but submit them to the Repo where the specific project is located. This Repo's Issue is limited to Aiursoft's overall work order request.
-</code></pre>
-                        <h2 id="start-immediately">Start immediately</h2>
-                        <p>If you are a newcomer to Aiursoft and want to quickly learn about its complete technical
-                            system, please refer to the following:</p>
-                        <ul>
-                            <li><a href="./Before%20starting.md">Learning Roadmap</a></li>
-                            <li><a href="#">API Table</a></li>
-                            <li><a href="#">SDK Download</a></li>
-                            <li><a href="#">Quickly build an Aiursoft-based application</a></li>
-                        </ul>
-                        <p>If you have enough time and want to apply the full technical system to your own project or
-                            business, please read the following:</p>
-                        <ul>
-                            <li><a href="#">How to compile from source</a></li>
-                            <li><a href="../Deployment/Getting%20Started.md">How to deploy all projects in an enterprise
-                                    computing cluster</a></li>
-                            <li><a href="../Getting%20Involed/How%20to%20contribute.md">How to contribute</a></li>
-                        </ul>
-                        <h2 id="aiursoft-platform">Aiursoft Platform</h2>
-                        <p>The Aiursoft platform is a microservices platform consisting of a number of components, each
-                            with different features. This includes application rights authentication and authorization
-                            systems, user unified identity authentication, object storage systems, message queues,
-                            document centers, account management centers, and more.</p>
-                        <ul>
-                            <li><a href="../Development/API.md">Application Authentication System</a></li>
-                            <li><a href="../Authentication/OAuth.md">User Authentication System</a></li>
-                            <li><a href="../Object%20Storage/What%20is%20OSS.md">Object Storage System</a></li>
-                            <li><a href="../Stargate/What%20is%20Stargate.md">Message Queue</a></li>
-                        </ul>
-                        <h2 id="document-language">Document language</h2>
-                        <p>Aiursoft's values are prioritized to respect English needs. We are still working hard to
-                            build documentation for each language. If you are willing to participate in the translation
-                            of the documentation, please welcome <a
-                                href="https://github.com/AiursoftWeb/Home">Contribution Documentation</a></p>
+                <div class="row">
+                    <form class="col-lg-6 col-md-8 col-12" method="post" action="https://slowaction"
+                        novalidate="novalidate">
+                        <div class="card mb-3">
+                            <div class="card-header">
+                                <i class="fa fa-bar-chart"></i>
+                                Disable With
+                            </div>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label for="Email">Any Email</label>
+                                    <input type="email" class="form-control" placeholder="Enter your Email..." value="" autocomplete="off">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="Password">Any Password</label>
+                                    <input type="password" class="form-control" placeholder="Enter your password..." id="Password" name="Password" autocomplete="off">
+                                </div>
+
+                                <input type="submit" class="btn btn-success" data-disable-with="Ohhh, we are working on it..." value="Click now to try the plugin!">
+
+                                <small class="form-text text-muted">
+                                    When you are submitting the form, the sign in button will be disabled, and the text
+                                    will be changed to 'Ohhh, we are working on it...' so that the user won't press it
+                                    again until the server response.
+                                </small>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="col-md-6 mb-3">
+                        <div class="card h-100">
+                            <div class="card-header">
+                                <i class="fa fa-clock-o"></i> Running Example
+                            </div>
+                            <div class="card-body">
+                                <h4>Page render time</h4>
+                                <kbd data-utc-time="5/17/2020 7:53:43 AM"></kbd>
+            
+                                <h4>Two minutes before page render</h4>
+                                <kbd data-utc-time="5/17/2020 7:51:43 AM"></kbd>
+            
+                                <h4>Two hours before page render</h4>
+                                <kbd data-utc-time="5/17/2020 5:53:43 AM"></kbd>
+            
+                                <h4>Two days before page render</h4>
+                                <kbd data-utc-time="5/15/2020 7:53:43 AM"></kbd>
+                            </div>
+                        </div>
                     </div>
-                </article>
+                </div>
                 <div class="mb-3 mt-3">
                     <a class="btn btn-info" href="https://github.com/AiursoftWeb/Nexus/blob/master/doc/Welcome/Home.md"
                         target="_blank">
