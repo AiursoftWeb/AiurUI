@@ -1,4 +1,5 @@
 const path = require('path');
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = [
   {
@@ -11,7 +12,14 @@ module.exports = [
     output: {
       filename: 'AiurCore.min.js',
       path: path.resolve(__dirname, 'dist'),
-      libraryTarget: 'window'
+      libraryTarget: 'window',
+      libraryExport: 'default'
+    },
+    optimization: {
+      minimize: true,
+      minimizer: [
+        new TerserPlugin({})
+      ]
     }
   },
   {
@@ -25,6 +33,12 @@ module.exports = [
       filename: 'AiurDashboard.min.js',
       path: path.resolve(__dirname, 'dist'),
       libraryTarget: 'window'
+    },
+    optimization: {
+      minimize: true,
+      minimizer: [
+        new TerserPlugin({})
+      ]
     }
   }
 ];
