@@ -35,14 +35,6 @@ var packages = [
         iscss: true,
         outputFileName: 'AiurMarket.min.css'
     },
-    // AiurMarket - JS
-    {
-        inputFiles: [
-            'js/AiurMarket.js'
-        ],
-        iscss: false,
-        outputFileName: 'AiurMarket.min.js'
-    },
     // AiurProduct - CSS
     {
         inputFiles: [
@@ -51,14 +43,6 @@ var packages = [
         ],
         iscss: true,
         outputFileName: 'AiurProduct.min.css'
-    },
-    // AiurProduct - JS
-    {
-        inputFiles: [
-            'js/AiurProduct.js'
-        ],
-        iscss: false,
-        outputFileName: 'AiurProduct.min.js'
     },
     // AiurDashboard - CSS
     {

@@ -40,5 +40,43 @@ module.exports = [
         new TerserPlugin({})
       ]
     }
+  },
+  {
+    mode: "production",
+    entry: {
+      'AiurMarket.js': [
+        path.resolve(__dirname, 'js/AiurMarket.js'),
+      ]
+    },
+    output: {
+      filename: 'AiurMarket.min.js',
+      path: path.resolve(__dirname, 'dist'),
+      libraryTarget: 'window'
+    },
+    optimization: {
+      minimize: true,
+      minimizer: [
+        new TerserPlugin({})
+      ]
+    }
+  },
+  {
+    mode: "production",
+    entry: {
+      'AiurProduct.js': [
+        path.resolve(__dirname, 'js/AiurProduct.js'),
+      ]
+    },
+    output: {
+      filename: 'AiurProduct.min.js',
+      path: path.resolve(__dirname, 'dist'),
+      libraryTarget: 'window'
+    },
+    optimization: {
+      minimize: true,
+      minimizer: [
+        new TerserPlugin({})
+      ]
+    }
   }
 ];

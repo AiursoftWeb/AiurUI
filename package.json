@@ -4,8 +4,7 @@
   "description": "The place for shared static resources of Aiursoft web apps.",
   "scripts": {
     "start": "static -p 5002",
-    "bundle": "gulp bundle",
-    "build": "webpack",
+    "build": "webpack && gulp bundle",
     "clean": "gulp clean"
   },
   "repository": {

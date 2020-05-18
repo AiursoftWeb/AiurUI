@@ -1,5 +1,6 @@
 import 'datatables';
 import $ from 'jquery';
+import './AiurCore';
 
 $(function () {
     $('.datatable').DataTable().destroy();

@@ -15,7 +15,6 @@
     <title>Aiursoft Document Center - Home</title>
     <link rel="stylesheet" href="./dist/AiurCore.min.css" />
     <link rel="stylesheet" href="./dist/AiurDashboard.min.css" />
-    <link href="./node_modules/highlightjs/styles/vs.css" rel="stylesheet" />
 
 </head>
 
@@ -316,15 +315,19 @@
                             <div class="card-body">
                                 <div class="form-group">
                                     <label for="Email">Any Email</label>
-                                    <input type="email" class="form-control" placeholder="Enter your Email..." value="" autocomplete="off">
+                                    <input type="email" class="form-control" placeholder="Enter your Email..." value=""
+                                        autocomplete="off">
                                 </div>
 
                                 <div class="form-group">
                                     <label for="Password">Any Password</label>
-                                    <input type="password" class="form-control" placeholder="Enter your password..." id="Password" name="Password" autocomplete="off">
+                                    <input type="password" class="form-control" placeholder="Enter your password..."
+                                        id="Password" name="Password" autocomplete="off">
                                 </div>
 
-                                <input type="submit" class="btn btn-success" data-disable-with="Ohhh, we are working on it..." value="Click now to try the plugin!">
+                                <input type="submit" class="btn btn-success"
+                                    data-disable-with="Ohhh, we are working on it..."
+                                    value="Click now to try the plugin!">
 
                                 <small class="form-text text-muted">
                                     When you are submitting the form, the sign in button will be disabled, and the text
@@ -343,13 +346,13 @@
                             <div class="card-body">
                                 <h4>Page render time</h4>
                                 <kbd data-utc-time="5/18/2020 6:39:43 AM"></kbd>
-            
+
                                 <h4>Two minutes before page render</h4>
                                 <kbd data-utc-time="5/17/2020 7:51:43 AM"></kbd>
-            
+
                                 <h4>Two hours before page render</h4>
                                 <kbd data-utc-time="5/17/2020 5:53:43 AM"></kbd>
-            
+
                                 <h4>Two days before page render</h4>
                                 <kbd data-utc-time="5/15/2020 7:53:43 AM"></kbd>
                             </div>
@@ -362,7 +365,8 @@
                                 <i class="fa fa-clock-o"></i> Anything clickable
                             </div>
                             <div class="card-body">
-                                <img data-href="https://www.kahla.app" src="https://ui.cdn.aiursoft.com/images/kahla-demo-wide.png" class="img-fluid">
+                                <img data-href="https://www.kahla.app"
+                                    src="https://ui.cdn.aiursoft.com/images/kahla-demo-wide.png" class="img-fluid">
                             </div>
                         </div>
                     </div>
@@ -387,6 +391,87 @@
                                 <button class="btn btn-success" onclick="nprogressDemo()">
                                     Click now to show nprogress
                                 </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-8 mb-3">
+                        <div class="card mb-3">
+                            <div class="card-header">
+                                <i class="fa fa-bar-chart"></i>
+                                Data table
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-striped datatable">
+                                        <thead>
+                                            <tr>
+                                                <th>Site Name</th>
+                                                <th>Create Time</th>
+                                                <th>Open to upload</th>
+                                                <th>Open to download</th>
+                                                <th>Operation</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>aiursoft-app-icons</td>
+                                                <td data-order="637002144000000000"
+                                                    data-utc-time="8/1/2019 12:00:00 AM"></td>
+                                                <td>
+                                                    <label class="text-danger">
+                                                        <i class="fa fa-times"></i>
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <label class="text-success">
+                                                        <i class="fa fa-check"></i>
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <div class="btn-group">
+                                                        <a class="btn btn-danger"
+                                                            href="/Dashboard/Apps/4b43b0aee35624cd95b910189b3dc231/Sites/aiursoft-app-icons/Delete">Delete</a>
+                                                        <a class="btn btn-secondary"
+                                                            href="/Dashboard/Apps/4b43b0aee35624cd95b910189b3dc231/Sites/aiursoft-app-icons/Edit">Settings</a>
+                                                        <a class="btn btn-primary"
+                                                            href="/Dashboard/Apps/4b43b0aee35624cd95b910189b3dc231/Sites/aiursoft-app-icons/ViewFiles">View
+                                                            Files</a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>developer-sample</td>
+                                                <td data-order="637002144000000000"
+                                                    data-utc-time="8/1/2019 12:00:00 AM"></td>
+                                                <td>
+                                                    <label class="text-danger">
+                                                        <i class="fa fa-times"></i>
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <label class="text-success">
+                                                        <i class="fa fa-check"></i>
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <div class="btn-group">
+                                                        <a class="btn btn-danger"
+                                                            href="/Dashboard/Apps/4b43b0aee35624cd95b910189b3dc231/Sites/developer-sample/Delete">Delete</a>
+                                                        <a class="btn btn-secondary"
+                                                            href="/Dashboard/Apps/4b43b0aee35624cd95b910189b3dc231/Sites/developer-sample/Edit">Settings</a>
+                                                        <a class="btn btn-primary"
+                                                            href="/Dashboard/Apps/4b43b0aee35624cd95b910189b3dc231/Sites/developer-sample/ViewFiles">View
+                                                            Files</a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <a class="btn btn-success"
+                                    href="/Dashboard/Apps/4b43b0aee35624cd95b910189b3dc231/CreateSite">Create New
+                                    Site</a>
                             </div>
                         </div>
                     </div>
@@ -435,7 +520,6 @@
                 </form>
             </div>
         </div>
-        <script src="./dist/AiurCore.min.js"></script>
         <script src="./dist/AiurDashboard.min.js"></script>
         <script>
             var value = $('#jqueryCalculated').html();
