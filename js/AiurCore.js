@@ -1,4 +1,14 @@
-'use strict';
+import $ from 'jquery';
+import 'bootstrap';
+import * as nprogress from "nprogress";
+import 'jquery-validation';
+import 'jquery-validation-unobtrusive';
+import Clipboard from 'clipboard';
+import DisableWith from 'jquery-disable-with';
+import UtcTime from 'jquery-utc-time';
+import Clickable from 'jquery-anything-clickable';
+window.$ = $;
+
 var initDarkTheme = function () {
     // Replace dark theme class
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -27,12 +37,21 @@ initDarkTheme();
 
 window.matchMedia('(prefers-color-scheme: dark)').addListener(initDarkTheme);
 
-// Trigger everytime full page load and part page load.
-window.addEventListener('load', function () {
+$(function () {
     initDarkTheme();
 
     // Activate clipboard tool
-    new ClipboardJS('[data-clipboard-text]');
+    new Clipboard('[data-clipboard-text]', {});
+
+    new DisableWith('data-disable-with');
+
+    new UtcTime({
+        onSet: function (element) {
+            $(element).tooltip();
+        }
+    });
+
+    new Clickable('data-href');
 
     // Activate tooltip tool
     $('[data-toggle="tooltip"]').tooltip();
@@ -44,27 +63,22 @@ window.addEventListener('load', function () {
 
     var setLanguageLink = function () {
         var link = $('[data-language-change-link]').attr('href');
-        var host = encodeURIComponent(this.window.location.origin);
-        var path = encodeURIComponent(this.window.location.pathname + this.window.location.search);
+        var host = encodeURIComponent(window.location.origin);
+        var path = encodeURIComponent(window.location.pathname + window.location.search);
         link = link + "?host=" + host + "&path=" + path;
         $('[data-language-change-link]').attr("href", link);
     }
 
     setLanguageLink();
 });
+window.nprogressDemo = function () {
+    nprogress.start();
+    setTimeout(() => {
+        nprogress.done();
+    }, 2000);
+}
 
-// Trigger only full page load.
-$(document).ready(function () {
-    // init jquery-utc-time
-    $(this).initUTCTime({
-        daysAgo: ' days ago',
-        hoursAgo: ' hours ago',
-        minutesAgo: ' minutes ago',
-        secondsAgo: ' seconds ago'
-    });
-});
-
-var asyncLayout = function (layoutQuery) {
+window.asyncLayout = function (layoutQuery) {
     var initUnder = function (query) {
         $(query).each(function () {
             $(this).click(function (e) {
@@ -81,7 +95,7 @@ var asyncLayout = function (layoutQuery) {
                 }
                 window.history.pushState({ "html": $("html").html(), "pageTitle": "" }, "", href);
                 e.preventDefault();
-                NProgress.start();
+                nprogress.start();
                 $.ajax({
                     url: href,
                     headers: { "X-No-Layout": "true" },
@@ -92,12 +106,12 @@ var asyncLayout = function (layoutQuery) {
                             initForm(layoutQuery + ' form');
                             dispatchEvent(new Event('load'));
                             window.scrollTo(0, 0);
-                            NProgress.done();
+                            nprogress.done();
                         }, 1);
                     },
                     error: function () {
                         window.location = href;
-                        NProgress.done();
+                        nprogress.done();
                     }
                 });
             })
@@ -111,7 +125,7 @@ var asyncLayout = function (layoutQuery) {
                 return;
             }
             e.preventDefault();
-            NProgress.start();
+            nprogress.start();
             $.ajax({
                 type: $(this).attr('method'),
                 url: $(this).attr('action'),
@@ -125,12 +139,12 @@ var asyncLayout = function (layoutQuery) {
                         initForm(layoutQuery + ' form');
                         dispatchEvent(new Event('load'));
                         window.scrollTo(0, 0);
-                        NProgress.done();
+                        nprogress.done();
                     }, 1);
                 },
                 error: function () {
                     alert('Unknown error!');
-                    NProgress.done();
+                    nprogress.done();
                 }
             });
         });

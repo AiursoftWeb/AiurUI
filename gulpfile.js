@@ -27,24 +27,6 @@ var packages = [
         iscss: true,
         outputFileName: 'AiurCore.min.css'
     },
-    // AiurCore - JS
-    {
-        inputFiles: [
-            'node_modules/jquery/dist/jquery.js',
-            'node_modules/bootstrap/dist/js/bootstrap.bundle.js',
-            'node_modules/nprogress/nprogress.js',
-            'node_modules/jquery.easing/jquery.easing.js',
-            'node_modules/jquery-validation/dist/jquery.validate.js',
-            'node_modules/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js',
-            'node_modules/clipboard/dist/clipboard.js',
-            'node_modules/jquery-disable-with/src/jquery-disable-with.js',
-            'node_modules/jquery-utc-time/src/jquery-utc-time.js',
-            'node_modules/jquery-anything-clickable/src/jquery-anything-clickable.js',
-            'js/AiurCore.js'
-        ],
-        iscss: false,
-        outputFileName: 'AiurCore.min.js'
-    },
     // AiurMarket - CSS
     {
         inputFiles: [
@@ -52,14 +34,6 @@ var packages = [
         ],
         iscss: true,
         outputFileName: 'AiurMarket.min.css'
-    },
-    // AiurMarket - JS
-    {
-        inputFiles: [
-            'js/AiurMarket.js'
-        ],
-        iscss: false,
-        outputFileName: 'AiurMarket.min.js'
     },
     // AiurProduct - CSS
     {
@@ -69,14 +43,6 @@ var packages = [
         ],
         iscss: true,
         outputFileName: 'AiurProduct.min.css'
-    },
-    // AiurProduct - JS
-    {
-        inputFiles: [
-            'js/AiurProduct.js'
-        ],
-        iscss: false,
-        outputFileName: 'AiurProduct.min.js'
     },
     // AiurDashboard - CSS
     {
@@ -88,16 +54,6 @@ var packages = [
         ],
         iscss: true,
         outputFileName: 'AiurDashboard.min.css'
-    },
-    // AiurDashboard - JS
-    {
-        inputFiles: [
-            'node_modules/startbootstrap-sb-admin/js/sb-admin.js',
-            'node_modules/datatables/media/js/jquery.dataTables.js',
-            'js/AiurDashboard.js'
-        ],
-        iscss: false,
-        outputFileName: 'AiurDashboard.min.js'
     }
 ]
 
@@ -125,17 +81,5 @@ gulp.task('css', function (done) {
     done();
 });
 
-gulp.task('js', function (done) {
-    packages.filter(t => !t.iscss).forEach(function (package) {
-        gulp.src(package.inputFiles)
-            .pipe(expect(package.inputFiles))
-            .pipe(concat('temp'))
-            .pipe(uglify())
-            .pipe(rename(package.outputFileName))
-            .pipe(gulp.dest('dist'));
-    });
-    done();
-});
-
-gulp.task('bundle', gulp.series('clean', 'copy-fonts', 'css', 'js'));
+gulp.task('bundle', gulp.series('clean', 'copy-fonts', 'css'));
 

@@ -1,4 +1,6 @@
-'use strict';
+import $ from 'jquery';
+import './AiurCore';
+window.$ = $;
 
 (function ($) {
     $.fn.ihavecookies = function (options) {
