@@ -50,11 +50,12 @@ AiurProduct is for Aiursoft download pages.
 
 ### AiurDashboard
 
-AiurProduct is for Aiursoft dashboard pages.
+AiurDashboard is for Aiursoft dashboard pages.
 
 * SB-Admin
 * Datatable
 * primer-markdown
+* Dropify
 
 ## What is the relationship with other Aiursoft apps
 
