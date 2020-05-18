@@ -81,17 +81,5 @@ gulp.task('css', function (done) {
     done();
 });
 
-gulp.task('js', function (done) {
-    packages.filter(t => !t.iscss).forEach(function (package) {
-        gulp.src(package.inputFiles)
-            .pipe(expect(package.inputFiles))
-            .pipe(concat('temp'))
-            .pipe(uglify())
-            .pipe(rename(package.outputFileName))
-            .pipe(gulp.dest('dist'));
-    });
-    done();
-});
-
-gulp.task('bundle', gulp.series('clean', 'copy-fonts', 'css', 'js'));
+gulp.task('bundle', gulp.series('clean', 'copy-fonts', 'css'));
 
