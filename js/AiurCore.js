@@ -6,39 +6,40 @@ import Clipboard from 'clipboard';
 import DisableWith from 'jquery-disable-with';
 import UtcTime from 'jquery-utc-time';
 import Clickable from 'jquery-anything-clickable';
-import { $, jQuery } from 'jquery';
+import $ from 'jquery';
 window.$ = $;
-window.jQuery = jQuery;
+window.jQuery = $;
 
-var initDarkTheme = function () {
-    // Replace dark theme class
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        // dark mode
-        $('.navbar-light').addClass('navbar-dark');
-        $('.navbar-light').removeClass('navbar-light');
-        $('body').addClass('bg-dark');
-        $('body').css('color', 'white');
-        $('.modal-content').addClass('bg-dark');
-        $('.modal-content').css('color', 'white');
-        $('.container-fluid').addClass('bg-dark');
-        $('.container-fluid').css('color', 'white');
-        $('.list-group-item').addClass('bg-dark');
-        $('.list-group-item').css('color', 'white');
-        $('.content-wrapper').addClass('bg-dark');
-        $('.card').addClass('bg-dark');
-        $('.bg-light').addClass('bg-dark');
-        $('.bg-light').removeClass('bg-light');
-        $('.bg-white').addClass('bg-dark');
-        $('.bg-white').removeClass('bg-white');
-        $('.bd-footer').addClass('bg-dark');
-        $('table').addClass('table-dark');
+(function ($) {
+
+    var initDarkTheme = function () {
+        // Replace dark theme class
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            // dark mode
+            $('.navbar-light').addClass('navbar-dark');
+            $('.navbar-light').removeClass('navbar-light');
+            $('body').addClass('bg-dark');
+            $('body').css('color', 'white');
+            $('.modal-content').addClass('bg-dark');
+            $('.modal-content').css('color', 'white');
+            $('.container-fluid').addClass('bg-dark');
+            $('.container-fluid').css('color', 'white');
+            $('.list-group-item').addClass('bg-dark');
+            $('.list-group-item').css('color', 'white');
+            $('.content-wrapper').addClass('bg-dark');
+            $('.card').addClass('bg-dark');
+            $('.bg-light').addClass('bg-dark');
+            $('.bg-light').removeClass('bg-light');
+            $('.bg-white').addClass('bg-dark');
+            $('.bg-white').removeClass('bg-white');
+            $('.bd-footer').addClass('bg-dark');
+            $('table').addClass('table-dark');
+        }
     }
-}
-initDarkTheme();
+    initDarkTheme();
 
-window.matchMedia('(prefers-color-scheme: dark)').addListener(initDarkTheme);
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(initDarkTheme);
 
-$(function () {
     initDarkTheme();
 
     // Activate clipboard tool
@@ -71,7 +72,8 @@ $(function () {
     }
 
     setLanguageLink();
-});
+})(jQuery);
+
 window.nprogressDemo = function () {
     nprogress.start();
     setTimeout(() => {
