@@ -3,8 +3,8 @@ import 'bootstrap';
 import 'nprogress';
 import 'jquery-validation';
 import 'jquery-validation-unobtrusive';
-import Clipboard from 'clipboard'
-//import 'jquery-disable-with';
+import Clipboard from 'clipboard';
+import { DisableWith } from 'jquery-disable-with';
 import { UtcTime } from 'jquery-utc-time';
 import { Clickable } from 'jquery-anything-clickable';
 window.$ = $;
@@ -43,7 +43,7 @@ $(function () {
     // Activate clipboard tool
     new Clipboard('[data-clipboard-text]', { });
 
-    //new DisableWith('data-disable-with');
+    new DisableWith('data-disable-with');
 
     new UtcTime({ });
 
