@@ -160,7 +160,7 @@ window.$ = $;
         return false;
     };
 
-}(jQuery));
+}($));
 $(document).ready(function () {
     $('body').ihavecookies({
         title: '&#x1F36A; This website uses cookies',
