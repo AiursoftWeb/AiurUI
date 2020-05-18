@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import 'bootstrap';
 import * as nprogress from "nprogress";
 import 'jquery-validation';
@@ -7,7 +6,9 @@ import Clipboard from 'clipboard';
 import DisableWith from 'jquery-disable-with';
 import UtcTime from 'jquery-utc-time';
 import Clickable from 'jquery-anything-clickable';
+import { $, jQuery } from 'jquery';
 window.$ = $;
+window.jQuery = jQuery;
 
 var initDarkTheme = function () {
     // Replace dark theme class
