@@ -1,4 +1,5 @@
-'use strict';
+import $ from 'jquery';
+window.$ = $;
 
 (function ($) {
     $.fn.ihavecookies = function (options) {

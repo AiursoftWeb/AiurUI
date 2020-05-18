@@ -6,7 +6,7 @@ import 'jquery-validation-unobtrusive';
 import Clipboard from 'clipboard';
 import DisableWith from 'jquery-disable-with';
 import UtcTime from 'jquery-utc-time';
-import { Clickable } from 'jquery-anything-clickable';
+import Clickable from 'jquery-anything-clickable';
 window.$ = $;
 
 var initDarkTheme = function () {
