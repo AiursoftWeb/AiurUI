@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import 'bootstrap';
-import 'nprogress';
+import * as nprogress from "nprogress";
 import 'jquery-validation';
 import 'jquery-validation-unobtrusive';
 import Clipboard from 'clipboard';
@@ -41,11 +41,11 @@ $(function () {
     initDarkTheme();
 
     // Activate clipboard tool
-    new Clipboard('[data-clipboard-text]', { });
+    new Clipboard('[data-clipboard-text]', {});
 
     new DisableWith('data-disable-with');
 
-    new UtcTime({ });
+    new UtcTime({});
 
     new Clickable('data-href');
 
@@ -67,9 +67,14 @@ $(function () {
 
     setLanguageLink();
 });
+window.nprogressDemo = function () {
+    nprogress.start();
+    setTimeout(() => {
+        nprogress.done();
+    }, 2000);
+}
 
-
-var asyncLayout = function (layoutQuery) {
+window.asyncLayout = function (layoutQuery) {
     var initUnder = function (query) {
         $(query).each(function () {
             $(this).click(function (e) {
@@ -86,7 +91,7 @@ var asyncLayout = function (layoutQuery) {
                 }
                 window.history.pushState({ "html": $("html").html(), "pageTitle": "" }, "", href);
                 e.preventDefault();
-                NProgress.start();
+                nprogress.start();
                 $.ajax({
                     url: href,
                     headers: { "X-No-Layout": "true" },
@@ -97,12 +102,12 @@ var asyncLayout = function (layoutQuery) {
                             initForm(layoutQuery + ' form');
                             dispatchEvent(new Event('load'));
                             window.scrollTo(0, 0);
-                            NProgress.done();
+                            nprogress.done();
                         }, 1);
                     },
                     error: function () {
                         window.location = href;
-                        NProgress.done();
+                        nprogress.done();
                     }
                 });
             })
@@ -116,7 +121,7 @@ var asyncLayout = function (layoutQuery) {
                 return;
             }
             e.preventDefault();
-            NProgress.start();
+            nprogress.start();
             $.ajax({
                 type: $(this).attr('method'),
                 url: $(this).attr('action'),
@@ -130,12 +135,12 @@ var asyncLayout = function (layoutQuery) {
                         initForm(layoutQuery + ' form');
                         dispatchEvent(new Event('load'));
                         window.scrollTo(0, 0);
-                        NProgress.done();
+                        nprogress.done();
                     }, 1);
                 },
                 error: function () {
                     alert('Unknown error!');
-                    NProgress.done();
+                    nprogress.done();
                 }
             });
         });
