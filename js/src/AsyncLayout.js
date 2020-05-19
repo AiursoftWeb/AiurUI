@@ -1,5 +1,6 @@
 
 import $ from 'jquery';
+import * as nprogress from "nprogress";
 
 window.asyncLayout = function (layoutQuery) {
     var initUnder = function (query) {
