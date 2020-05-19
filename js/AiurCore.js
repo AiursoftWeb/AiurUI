@@ -1,5 +1,5 @@
 import 'bootstrap';
-import * as nprogress from "nprogress";
+import 'nprogress';
 import 'jquery-validation';
 import 'jquery-validation-unobtrusive';
 import './src/AsyncLayout';
