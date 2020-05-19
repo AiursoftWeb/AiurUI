@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import 'bootstrap';
 import 'jquery-validation';
 import 'jquery-validation-unobtrusive';
@@ -7,7 +8,6 @@ import DisableWith from 'jquery-disable-with';
 import UtcTime from 'jquery-utc-time';
 import Clickable from 'jquery-anything-clickable';
 import DarkMonitor from './src/Dark';
-import $ from 'jquery';
 window.$ = $;
 window.jQuery = $;
 
