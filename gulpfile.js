@@ -1,11 +1,6 @@
 var gulp = require("gulp");
 var del = require('del');
-var rename = require('gulp-rename');
-var uglify = require('gulp-uglify');
-var cleancss = require('gulp-clean-css');
-var concat = require('gulp-concat');
 var flatten = require('gulp-flatten');
-var expect = require('gulp-expect-file');
 var supportedfonts = [
     'node_modules/**/fonts/*.woff',
     'node_modules/**/fonts/*.woff2',
