@@ -1,5 +1,5 @@
-import 'datatables';
 import './AiurCore';
+import 'datatables';
 import 'dropify';
 import $ from 'jquery';
 

@@ -3,7 +3,8 @@
   "version": "0.8.0",
   "description": "The place for shared static resources of Aiursoft web apps.",
   "scripts": {
-    "start": "static -p 5002",
+    "start": "npm run build && npm run open && static -p 5000",
+    "open" : "start http://localhost:5000",
     "build": "gulp bundle && webpack",
     "clean": "gulp clean"
   },
