@@ -2,6 +2,7 @@ class DarkMonitor {
     constructor() {
         this.initDarkTheme();
         window.matchMedia('(prefers-color-scheme: dark)').addListener(this.initDarkTheme);
+        window.addEventListener('load', this.initDarkTheme());
     }
 
     initDarkTheme() {
