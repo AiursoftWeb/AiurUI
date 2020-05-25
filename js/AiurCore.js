@@ -14,7 +14,7 @@ window.jQuery = $;
 class UIInitor {
     constructor() {
         this.initUI();
-        window.addEventListener('load', this.initDarkTheme);
+        window.addEventListener('load', this.initUI);
     }
 
     initUI() {
