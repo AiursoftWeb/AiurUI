@@ -87,7 +87,7 @@ class AiurUploader {
         this.fileInput.unbind('change');
         this.fileInput.on('change', this.onFile);
         var dropi = this.fileInput.dropify();
-        dropi.on('dropify.afterClear', reset);
+        dropi.on('dropify.afterClear', this.reset);
     }
 }
 
