@@ -79,7 +79,7 @@ class AiurUploader {
                 this.progressbar.removeClass('progress-bar-animated');
                 this.progressbar.css('width', '100%');
             },
-            error: reset
+            error: this.reset
         });
     }
 
