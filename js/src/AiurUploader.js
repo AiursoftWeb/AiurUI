@@ -19,22 +19,22 @@ class AiurUploader {
         return (parts[parts.length - 1]).toLowerCase();
     }
 
-    reset() {
-        this.addressInput.val("");
-        this.addressInput.attr('data-internet-path', "");
-        this.progressbar.css('width', '0%');
+    reset(that) {
+        that.addressInput.val("");
+        that.addressInput.attr('data-internet-path', "");
+        that.progressbar.css('width', '0%');
         window.onbeforeunload = function () { };
     }
 
-    onFile() {
-        var file = this.fileInput.prop("files")[0];
-        var ext = this.getExtension(file.name);
+    onFile(that) {
+        var file = that.fileInput.prop("files")[0];
+        var ext = that.getExtension(file.name);
 
-        if (this.validExtensions.length > 0 && this.validExtensions.indexOf(ext) === -1) {
+        if (that.validExtensions.length > 0 && that.validExtensions.indexOf(ext) === -1) {
             return;
         }
 
-        if (file.size / 1024 / 1024 > this.sizeInMb) {
+        if (file.size / 1024 / 1024 > that.sizeInMb) {
             return;
         }
 
@@ -44,10 +44,10 @@ class AiurUploader {
 
         var formData = new FormData();
 
-        this.progress.removeClass('d-none');
-        this.progressbar.css('width', '0%');
-        this.progressbar.removeClass('bg-success');
-        this.progressbar.addClass('progress-bar-animated');
+        that.progress.removeClass('d-none');
+        that.progressbar.css('width', '0%');
+        that.progressbar.removeClass('bg-success');
+        that.progressbar.addClass('progress-bar-animated');
 
         formData.append("file", file);
         formData.append("recursiveCreate", true);
@@ -65,7 +65,7 @@ class AiurUploader {
                 if (myXhr.upload) {
                     myXhr.upload.addEventListener('progress', function (e) {
                         if (e.lengthComputable) {
-                            this.progressbar.css('width', 100 * e.loaded / e.total + '%');
+                            that.progressbar.css('width', 100 * e.loaded / e.total + '%');
                         }
                     }, false);
                 }
@@ -73,21 +73,26 @@ class AiurUploader {
             },
             success: function (data) {
                 window.onbeforeunload = function () { };
-                this.addressInput.val(data.filePath);
-                this.addressInput.attr('data-internet-path', data.internetPath);
-                this.progressbar.addClass('bg-success');
-                this.progressbar.removeClass('progress-bar-animated');
-                this.progressbar.css('width', '100%');
+                that.addressInput.val(data.filePath);
+                that.addressInput.attr('data-internet-path', data.internetPath);
+                that.progressbar.addClass('bg-success');
+                that.progressbar.removeClass('progress-bar-animated');
+                that.progressbar.css('width', '100%');
             },
-            error: this.reset
+            error: that.reset
         });
     }
 
     init() {
+        var that = this;
         this.fileInput.unbind('change');
-        this.fileInput.on('change', this.onFile);
+        this.fileInput.on('change', function() {
+            that.onFile(that);
+        });
         var dropi = this.fileInput.dropify();
-        dropi.on('dropify.afterClear', this.reset);
+        dropi.on('dropify.afterClear', function() {
+            that.reset(that);
+        });
     }
 }
 
