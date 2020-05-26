@@ -53,7 +53,7 @@ class AiurUploader {
         formData.append("recursiveCreate", true);
 
         $.ajax({
-            url: uploadUrl,
+            url: that.uploadUrl,
             type: 'post',
             enctype: 'multipart/form-data',
             data: formData,
