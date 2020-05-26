@@ -29,6 +29,7 @@ AiurCore is for all Aiursoft apps. This contains some basic tools for Aiursoft f
 * Popper
 * Bootstrap
 * Font-awesome
+* Dropify
 * jquery.validate.js
 * jquery.validate.unobtrusive.js
 * Clipboard
@@ -55,7 +56,6 @@ AiurDashboard is for Aiursoft dashboard pages.
 * SB-Admin
 * Datatable
 * primer-markdown
-* Dropify
 
 ## What is the relationship with other Aiursoft apps
 

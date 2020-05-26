@@ -3,6 +3,7 @@ import 'bootstrap';
 import 'jquery-validation';
 import 'jquery-validation-unobtrusive';
 import './src/AsyncLayout';
+import './src/AiurUploader';
 import Clipboard from 'clipboard';
 import DisableWith from 'jquery-disable-with';
 import UtcTime from 'jquery-utc-time';
