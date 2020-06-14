@@ -14,12 +14,11 @@ window.jQuery = $;
 
 class UIInitor {
     constructor() {
-        this.initUI();
+        new DarkMonitor();
         window.addEventListener('load', this.initUI);
     }
 
     initUI() {
-        new DarkMonitor();
 
         // Activate clipboard tool
         new Clipboard('[data-clipboard-text]', {});
