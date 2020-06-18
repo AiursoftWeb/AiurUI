@@ -18,7 +18,7 @@
   "author": "Anduin@aiursoft.com",
   "license": "MIT",
   "dependencies": {
-    "angular": "^1.7.9",
+    "angular": "^1.8.0",
     "animate.css": "^4.1.0",
     "arrow-js": "^0.1.9",
     "autosize": "^4.0.2",
