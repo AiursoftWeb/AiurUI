@@ -304,23 +304,27 @@
                     <li class="breadcrumb-item active">Home</li>
                 </ol>
                 <div class="row">
-                    <form class="col-lg-4 col-md-8 col-12" method="post" action="https://slowaction"
-                        novalidate="novalidate">
+                    <form class="col-lg-4 col-md-8 col-12" method="post" action="https://slowaction" novalidate="novalidate">
                         <div class="card mb-3">
                             <div class="card-header">
                                 <i class="fa fa-bar-chart"></i>
                                 Disable With
                             </div>
                             <div class="card-body">
+                                <div class="text-danger validation-summary-valid" data-valmsg-summary="true">
+                                    <ul><li style="display:none"></li></ul>
+                                </div>
                                 <div class="form-group">
                                     <label for="Email">Any Email</label>
                                     <input type="email" class="form-control" placeholder="Enter your Email..." value=""
+                                        data-val="true" data-val-email="The Aiursoft Account field is not a valid e-mail address." data-val-required="Email is required."
                                         autocomplete="off">
                                 </div>
 
                                 <div class="form-group">
                                     <label for="Password">Any Password</label>
                                     <input type="password" class="form-control" placeholder="Enter your password..."
+                                        data-val="true" data-val-required="Password is required."
                                         id="Password" name="Password" autocomplete="off">
                                 </div>
 
