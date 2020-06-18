@@ -48,6 +48,9 @@ window.asyncLayout = function (layoutQuery) {
             if (href && href.toLowerCase().startsWith('https')) {
                 return;
             }
+            if(!$(this).valid()) {
+                return;
+            }
             e.preventDefault();
             nprogress.start();
             $.ajax({
