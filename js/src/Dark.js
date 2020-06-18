@@ -1,10 +1,4 @@
-class DarkMonitor {
-    constructor() {
-        this.initDarkTheme();
-        window.matchMedia('(prefers-color-scheme: dark)').addListener(this.initDarkTheme);
-        window.addEventListener('load', this.initDarkTheme);
-    }
-
+class DarkSwitcher {
     initDarkTheme() {
         // Replace dark theme class
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -31,5 +25,5 @@ class DarkMonitor {
     }
 }
 
-export default DarkMonitor
+export default DarkSwitcher
 

@@ -8,14 +8,17 @@ import Clipboard from 'clipboard';
 import DisableWith from 'jquery-disable-with';
 import UtcTime from 'jquery-utc-time';
 import Clickable from 'jquery-anything-clickable';
-import DarkMonitor from './src/Dark';
+import DarkSwitcher from './src/Dark';
 window.$ = $;
 window.jQuery = $;
 
 class UIInitor {
     constructor() {
-        new DarkMonitor();
+        var darkMonitor = new DarkSwitcher();
+        darkMonitor.initDarkTheme();
+        window.matchMedia('(prefers-color-scheme: dark)').addListener(darkMonitor.initDarkTheme);
         window.addEventListener('load', this.initUI);
+        window.addEventListener('load', darkMonitor.initDarkTheme);
     }
 
     initUI() {
