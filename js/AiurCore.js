@@ -25,7 +25,19 @@ class UIInitor {
         // Activate clipboard tool
         new Clipboard('[data-clipboard-text]', {});
 
-        new DisableWith('data-disable-with');
+        new DisableWith('data-disable-with', function (firstForm, submitButton, prevalue, isButton) {
+            // Handle jquery validation invalid event.
+            $(firstForm).bind('invalid-form.validate', () => {
+                setTimeout(() => {
+                    submitButton.removeAttribute('disabled');
+                    if (isButton) {
+                        submitButton.innerHTML = prevalue;
+                    } else {
+                        submitButton.setAttribute('value', prevalue);
+                    }
+                }, 1);
+            });
+        });
 
         new UtcTime({
             onSet: function (element) {
