@@ -92,7 +92,7 @@ install_aiurUI()
     ui_path="$(pwd)/apps/AiurUI"
 
     cd $ui_path
-    npm i && npm run bundle
+    npm i && npm run build
     cd ~
 
     # Config caddy
