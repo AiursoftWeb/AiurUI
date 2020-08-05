@@ -93,6 +93,7 @@ install_aiurUI()
     npm i && npm run build
     cd ~
 
+    rm $ui_path -rvf
     mkdir /var/www
     mkdir $ui_path
     mv ~/AiurUI/* $ui_path
