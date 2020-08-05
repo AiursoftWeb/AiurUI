@@ -83,17 +83,20 @@ install_aiurUI()
     apt install -y git vim caddy nodejs ufw > /dev/null
 
     # Download the source code
-    mkdir apps
-    ls apps | grep -q AiurUI && rm ./apps/AiurUI -rf
-    git clone -b master https://github.com/AiursoftWeb/AiurUI.git apps/AiurUI
+    ls | grep -q AiurUI && rm ./AiurUI -rf
+    git clone -b master https://github.com/AiursoftWeb/AiurUI.git
 
     # Build the code
     echo 'Building the source code...'
-    ui_path="$(pwd)/apps/AiurUI"
-
-    cd $ui_path
+    ui_path="/var/www/aiurui-web"
+    cd ~/AiurUI
     npm i && npm run build
     cd ~
+
+    mkdir /var/www
+    mkdir /var/www/virtual-web
+    mv ~/AiurUI/* $ui_path
+    rm ./
 
     # Config caddy
     echo 'Configuring the web proxy...'
