@@ -14,9 +14,9 @@ delete_service()
 
 delete_service "caddy.service"
 
-rm ~/apps/AiurUI -rvf
 rm ~/AiurUI -rvf
 rm /etc/caddy -rvf
+rm /var/www/aiurui-web -rvf
 
 apt remove caddy -y
 

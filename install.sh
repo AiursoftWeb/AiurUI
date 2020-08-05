@@ -87,8 +87,8 @@ install_aiurUI()
     git clone -b master https://github.com/AiursoftWeb/AiurUI.git
 
     # Build the code
-    echo 'Building the source code...'
     ui_path="/var/www/aiurui-web"
+    echo "Building the source code to $ui_path..."
     cd ~/AiurUI
     npm i && npm run build
     cd ~
@@ -96,7 +96,7 @@ install_aiurUI()
     mkdir /var/www
     mkdir /var/www/virtual-web
     mv ~/AiurUI/* $ui_path
-    rm ./
+    rm ~/AiurUI -rvf
 
     # Config caddy
     echo 'Configuring the web proxy...'
