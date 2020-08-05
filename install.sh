@@ -94,7 +94,7 @@ install_aiurUI()
     cd ~
 
     mkdir /var/www
-    mkdir /var/www/virtual-web
+    mkdir $ui_path
     mv ~/AiurUI/* $ui_path
     rm ~/AiurUI -rvf
 
