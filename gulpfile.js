@@ -7,7 +7,13 @@ var supportedfonts = [
     'node_modules/**/fonts/*.eot',
     'node_modules/**/fonts/*.svg',
     'node_modules/**/fonts/*.ttf',
-    'node_modules/**/fonts/*.otf'
+    'node_modules/**/fonts/*.otf',
+    'node_modules/**/webfonts/*.woff',
+    'node_modules/**/webfonts/*.woff2',
+    'node_modules/**/webfonts/*.eot',
+    'node_modules/**/webfonts/*.svg',
+    'node_modules/**/webfonts/*.ttf',
+    'node_modules/**/webfonts/*.otf'
 ];
 
 
