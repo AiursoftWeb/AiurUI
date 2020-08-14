@@ -14,15 +14,15 @@ install_aiurUI()
     aiur network/enable_bbr
     aiur install/caddy
     aiur install/node
-    aiur clone_to AiursoftWeb/AiurUI ./AiurUI
+    aiur git/clone_to AiursoftWeb/AiurUI ./AiurUI
     cd ./AiurUI && npm i && npm run build && cd ..
     rm $ui_path -rvf
     mkdir -p $ui_path
     mv ./AiurUI/* $ui_path && rm ./AiurUI -rf
     aiur caddy/add_file $1 $ui_path
-    aiur open_port 443
-    aiur  open_port 80
-    aiur  enable_firewall
+    aiur firewall/open_port 443
+    aiur firewall/open_port 80
+    aiur firewall/enable_firewall
 
     echo "Successfully installed AiurUI as a service in your machine! Please open https://$1 to try it now!"
 }
