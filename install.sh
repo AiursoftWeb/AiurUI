@@ -3,7 +3,7 @@ ui_path="/opt/apps/AiurUI"
 
 install_aiurUI()
 {
-    if [[ $(curl -sL ifconfig.me) == *"$(dig +short $1)"* ]]; 
+    if [[ $(curl -sL ifconfig.me) == "$(dig +short $1)" ]]; 
     then
         echo "IP is correct."
     else
