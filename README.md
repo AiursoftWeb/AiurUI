@@ -27,12 +27,6 @@ Execute the following command on the server(A brand new Ubuntu 16.04+):
 $ curl -sL https://github.com/AiursoftWeb/AiurUI/raw/master/install.sh | sudo bash -s ui.example.com
 ```
 
-To uninstall:
-
-```bash
-$ curl -sL https://github.com/AiursoftWeb/AiurUI/raw/master/uninstall.sh | sudo bash
-```
-
 ## Components
 
 ### AiurCore
