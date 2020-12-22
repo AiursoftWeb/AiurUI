@@ -9,7 +9,7 @@ upgrade_aiurUI()
     mkdir -p $ui_path
     mv ./AiurUI/* $ui_path && rm ./AiurUI -rf
 
-    echo "Successfully upgraded AiurUI as a service in your machine!
+    echo "Successfully upgraded AiurUI as a service in your machine!"
 }
 
 upgrade_aiurUI "$@"
