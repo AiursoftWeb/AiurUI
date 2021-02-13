@@ -9,7 +9,7 @@ var js = files.map(f => {
     output: {
       filename: `${f}.min.js`,
       path: path.resolve(__dirname, 'dist'),
-      libraryTarget: 'window',
+      libraryTarget: 'umd',
       libraryExport: 'default'
     },
     optimization: {
