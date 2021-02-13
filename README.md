@@ -6,20 +6,14 @@ The place for shared static resources of Aiursoft web apps
 
 ## How to run
 
-We **strongly recommend** running or modifying this app using Visual Studio Code
+Install [nodejs and npm](https://nodejs.org) first.
 
-### Dependencies
+```bash
+npm install
+npm start
+```
 
-* npm
-
-### Bundle
-
-Please excuse the following commands in the project folder:
-
-    npm install
-    npm run bundle
-
-### Install on server
+### Install on a server
 
 Execute the following command on the server(A brand new Ubuntu 16.04+):
 
@@ -27,7 +21,7 @@ Execute the following command on the server(A brand new Ubuntu 16.04+):
 $ curl -sL https://github.com/AiursoftWeb/AiurUI/raw/master/install.sh | sudo bash -s ui.example.com
 ```
 
-Execute the following command on the server to upgrade existing installtion.
+Execute the following command on the server to upgrade an existing installation.
 
 ```bash
 $ curl -sL https://github.com/AiursoftWeb/AiurUI/raw/master/upgrade.sh | sudo bash
@@ -73,9 +67,9 @@ AiurDashboard is for Aiursoft dashboard pages.
 
 ## What is the relationship with other Aiursoft apps
 
-All Aiursoft web applications with view shall put all those static files, like stylesheets or js files in our CDN server.
+All Aiursoft web applications with view shall put all those static files, like stylesheets or js files on our CDN server.
 
-User get those files directy from CDN server.
+Users can get those files directly from our CDN server.
 
 ## How to contribute
 
