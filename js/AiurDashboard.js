@@ -8,7 +8,7 @@ $(function () {
         "pageLength": 15
     });
 
-    $("#sidenavToggler").click(function (e) {
+    $("#sidenavToggler").on('click', function (e) {
         e.preventDefault();
         $("body").toggleClass("sidenav-toggled");
         $(".navbar-sidenav .nav-link-collapse").addClass("collapsed");
