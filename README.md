@@ -1,7 +1,7 @@
 # AiurUI
 
 [![Build status](https://dev.azure.com/aiursoft/Star/_apis/build/status/AiurUI%20Build)](https://dev.azure.com/aiursoft/Star/_build/latest?definitionId=2)
-[![Website](https://img.shields.io/website?url=https%3A%2F%ui.aiursoft.com)](https://ui.aiursoft.com)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fui.aiursoft.com)](https://ui.aiursoft.com)
 
 The place for shared static resources of Aiursoft web apps
 
