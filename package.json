@@ -3,8 +3,7 @@
   "version": "0.8.0",
   "description": "The place for shared static resources of Aiursoft web apps.",
   "scripts": {
-    "start": "npm run build && npm run open && static -p 5000",
-    "open": "start http://localhost:5000",
+    "start": "npm run build && live-server --port=5000",
     "build": "gulp bundle && webpack",
     "clean": "gulp clean"
   },
@@ -87,7 +86,7 @@
     "gulp-babel": "^8.0.0",
     "gulp-flatten": "^0.4.0",
     "mini-css-extract-plugin": "^2.6.0",
-    "node-static": "^0.7.11",
+    "live-server": "^1.2.1",
     "postcss-cli": "^9.1.0",
     "postcss-loader": "^6.2.1",
     "sass": "^1.49.9",
