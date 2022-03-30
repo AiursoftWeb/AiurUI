@@ -48,9 +48,14 @@ var css = files.map(f => {
             // {
             //   loader: 'sass-loader'
             // }
-            MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'
-          ]
-        }
+            MiniCssExtractPlugin.loader, {
+              loader: 'css-loader',
+              options: {
+                url: false
+              }
+            }, 'sass-loader'
+          ],
+        },
       ]
     }
   }
