@@ -1,5 +1,6 @@
 const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 var files = ['AiurCore', 'AiurDashboard', 'AiurProduct', 'AiurMarket'];
 
 var js = files.map(f => {
@@ -21,32 +22,42 @@ var js = files.map(f => {
   }
 });
 var css = files.map(f => {
-  return{
+  return {
+    plugins: [new MiniCssExtractPlugin({
+      filename: `${f}.min.css`,
+    })],
     mode: 'production',
     entry: path.resolve(__dirname, `css/${f}.scss`),
     module: {
       rules: [
         {
+          test: /\.scss$/,
           use: [
-            {
-              loader: 'file-loader',
+            // // {
+            // //   loader: 'file-loader',
+            // //   options: {
+            // //     name: '[name].min.css',
+            // //   }
+            // // },
+            // {
+            //   loader: MiniCssExtractPlugin.loader,
+            // },
+            // {
+            //   loader: 'css-loader'
+            // },
+            // {
+            //   loader: 'sass-loader'
+            // }
+            MiniCssExtractPlugin.loader, {
+              loader: 'css-loader',
               options: {
-                name: '[name].min.css',
+                url: false
               }
-            },
-            {
-              loader: 'extract-loader'
-            },
-            {
-              loader: 'css-loader?-url'
-            },
-            {
-              loader: 'sass-loader'
-            }
-          ]
-        }
+            }, 'sass-loader'
+          ],
+        },
       ]
     }
   }
-})
+});
 module.exports = js.concat(css);
