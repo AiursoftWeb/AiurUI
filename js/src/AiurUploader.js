@@ -61,7 +61,7 @@ class AiurUploader {
             contentType: false,
             processData: false,
             xhr: function () {
-                var myXhr = $.ajaxSetup.xhr();
+                var myXhr = $.ajaxSettings.xhr();
                 if (myXhr.upload) {
                     myXhr.upload.addEventListener('progress', function (e) {
                         if (e.lengthComputable) {
