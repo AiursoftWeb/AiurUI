@@ -19,13 +19,13 @@ npm start
 Execute the following command on the server(A brand new Ubuntu 16.04+):
 
 ```bash
-$ curl -sL https://github.com/AiursoftWeb/AiurUI/raw/master/install.sh | sudo bash -s ui.example.com
+curl -sL https://gitlab.aiursoft.cn/aiursoft/aiurui/-/raw/master/install.sh | sudo bash -s ui.example.com
 ```
 
 Execute the following command on the server to upgrade an existing installation.
 
 ```bash
-$ curl -sL https://github.com/AiursoftWeb/AiurUI/raw/master/upgrade.sh | sudo bash
+curl -sL https://gitlab.aiursoft.cn/aiursoft/aiurui/-/raw/master/upgrade.sh | sudo bash
 ```
 
 ## Components
