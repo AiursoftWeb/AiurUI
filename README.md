@@ -1,7 +1,7 @@
 # AiurUI
 
 [![Website](https://img.shields.io/website?url=https%3A%2F%2Fui.aiursoft.com)](https://ui.aiursoft.com)
-[![ManHours](https://manhours.aiursoft.cn/gitlab/gitlab.aiursoft.cn/aiursoft/aiurui.svg)](https://gitlab.aiursoft.cn/aiursoft/aiurui/-/commits/master?ref_type=heads)
+[![ManHours](https://manhours.aiursoft.cn/r/gitlab.aiursoft.cn/aiursoft/aiurui.svg)](https://gitlab.aiursoft.cn/aiursoft/aiurui/-/commits/master?ref_type=heads)
 
 The place for shared static resources of Aiursoft web apps
 
