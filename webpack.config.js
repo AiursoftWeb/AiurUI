@@ -1,7 +1,7 @@
 const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-var files = ['AiurCore', 'AiurDashboard', 'AiurProduct', 'AiurMarket'];
+var files = ['AiurCore', 'AiurDashboard', 'AiurMarket'];
 
 var js = files.map(f => {
   return {
