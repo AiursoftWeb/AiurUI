@@ -6,7 +6,7 @@ import Clipboard from 'clipboard';
 import DisableWith from 'jquery-disable-with';
 import UtcTime from 'jquery-utc-time';
 import Clickable from 'jquery-anything-clickable';
-import DarkSwitcher from './src/Dark';
+import DarkSwitcher from './src/DarkSwitcher';
 window.$ = $;
 window.jQuery = $;
 
