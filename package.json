@@ -1,6 +1,6 @@
 {
   "name": "aiurui",
-  "version": "0.8.0",
+  "version": "1.0.0",
   "description": "The place for shared static resources of Aiursoft web apps.",
   "scripts": {
     "start": "npm run build && live-server --port=5000",
