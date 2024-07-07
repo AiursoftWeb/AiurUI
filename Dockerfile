@@ -1,6 +1,6 @@
 # ============================
 # Prepare Build Environment
-FROM hub.aiursoft.cn/node:21-alpine as npm-env
+FROM hub.aiursoft.cn/node:21-alpine AS npm-env
 WORKDIR /src
 COPY . .
 RUN npm install
