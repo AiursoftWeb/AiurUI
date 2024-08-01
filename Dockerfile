@@ -3,7 +3,7 @@
 FROM hub.aiursoft.cn/node:21-alpine AS npm-env
 WORKDIR /src
 COPY . .
-RUN npm install
+RUN npm install --loglevel verbose
 RUN npm run build
 
 # ============================
