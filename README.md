@@ -4,7 +4,7 @@
 [![Pipeline stat](https://gitlab.aiursoft.cn/aiursoft/aiurui/badges/master/pipeline.svg)](https://gitlab.aiursoft.cn/aiursoft/aiurui/-/pipelines)
 [![ManHours](https://manhours.aiursoft.cn/r/gitlab.aiursoft.cn/aiursoft/aiurui.svg)](https://gitlab.aiursoft.cn/aiursoft/aiurui/-/commits/master?ref_type=heads)
 [![Website](https://img.shields.io/website?url=https%3A%2F%2Fui.aiursoft.cn)](https://ui.aiursoft.cn)
-[![Docker](https://img.shields.io/badge/docker-latest-blue?logo=docker)](https://hub.aiursoft.cn/#!/taglist/aiursoft/aiurui)
+[![Docker](https://img.shields.io/docker/pulls/aiursoft/aiurui.svg)](https://hub.docker.com/r/aiursoft/aiurui)
 
 The place for shared static resources of Aiursoft web apps
 
@@ -24,7 +24,7 @@ First, install Docker [here](https://docs.docker.com/get-docker/).
 Then run the following commands in a Linux shell:
 
 ```bash
-image=hub.aiursoft.cn/aiursoft/aiurui
+image=aiursoft/aiurui
 appName=aiurui
 sudo docker pull $image
 sudo docker run -d --name $appName --restart unless-stopped -p 5000:5000 $image
@@ -36,7 +36,7 @@ The docker image has the following context:
 
 | Properties  | Value                                  |
 |-------------|----------------------------------------|
-| Image       | hub.aiursoft.cn/aiursoft/aiurui        |
+| Image       | aiursoft/aiurui                        |
 | Ports       | 5000                                   |
 | Binary path | /app                                   |
 
