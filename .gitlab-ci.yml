@@ -1,10 +1,31 @@
 stages:
-  - build
+  - deploy
 
-build-job:
-  stage: build
-  before_script:
-    - pwd
+deploy_docker:
+  stage: deploy
   script:
-    - docker build . -t hub.aiursoft.cn/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME:latest
-    - docker push hub.aiursoft.cn/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME:latest
+    - if [ "$CI_COMMIT_REF_NAME" = "master" ]; then TAG="latest"; else TAG="$CI_COMMIT_REF_NAME"; fi
+    - echo building image hub.aiursoft.cn/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME:$TAG
+    - docker build . -t hub.aiursoft.cn/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME:$TAG
+    - docker push hub.aiursoft.cn/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME:$TAG
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "master"'
+      exists:
+      - Dockerfile
+
+deploy_docker_hub:
+  stage: deploy
+  needs: 
+    - deploy_docker
+  script:
+    - if [ "$CI_PROJECT_NAMESPACE" = "anduin" ]; then NAMESPACE="anduin2019"; else NAMESPACE="$CI_PROJECT_NAMESPACE"; fi
+    - if [ "$CI_COMMIT_REF_NAME" = "master" ]; then TAG="latest"; else TAG="$CI_COMMIT_REF_NAME"; fi
+    - echo building image $NAMESPACE/$CI_PROJECT_NAME:$TAG
+    - docker build . -t $NAMESPACE/$CI_PROJECT_NAME:$TAG
+    - echo "Logging in to Docker Hub..."
+    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+    - docker push $NAMESPACE/$CI_PROJECT_NAME:$TAG
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "master"'
+      exists:
+      - Dockerfile
