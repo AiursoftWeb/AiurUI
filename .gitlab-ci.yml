@@ -20,7 +20,7 @@ deploy_docker_registry:
 deploy_docker_hub:
   stage: deploy
   needs: 
-    - deploy_docker
+    - deploy_docker_registry
   script:
     - if [ "$CI_PROJECT_NAMESPACE" = "anduin" ]; then NAMESPACE="anduin2019"; else NAMESPACE="$CI_PROJECT_NAMESPACE"; fi
     - if [ "$CI_COMMIT_REF_NAME" = "master" ]; then TAG="latest"; else TAG="$CI_COMMIT_REF_NAME"; fi
