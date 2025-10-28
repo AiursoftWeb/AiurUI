@@ -3,7 +3,7 @@
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://gitlab.aiursoft.com/aiursoft/aiurui/-/blob/master/LICENSE)
 [![Pipeline stat](https://gitlab.aiursoft.com/aiursoft/aiurui/badges/master/pipeline.svg)](https://gitlab.aiursoft.com/aiursoft/aiurui/-/pipelines)
 [![ManHours](https://manhours.aiursoft.com/r/gitlab.aiursoft.com/aiursoft/aiurui.svg)](https://gitlab.aiursoft.com/aiursoft/aiurui/-/commits/master?ref_type=heads)
-[![Website](https://img.shields.io/website?url=https%3A%2F%2Fui.aiursoft.cn)](https://ui.aiursoft.cn)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fui.aiursoft.com)](https://ui.aiursoft.com)
 [![Docker](https://img.shields.io/docker/pulls/aiursoft/aiurui.svg)](https://hub.docker.com/r/aiursoft/aiurui)
 
 The place for shared static resources of Aiursoft web apps
